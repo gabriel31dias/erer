@@ -1,0 +1,125 @@
+<%= render "shared/navbar" %>
+
+<div class="banner_metodo" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <center>
+      <h1><strong>MÉTODO</strong></h1>
+    </center>
+    <center>
+      <p>BRASAS</p>
+    </center>
+  </div>
+</div>
+
+<div class="container mt-5 metodo1">
+  <center>
+    <h6>Método original e exclusivo que utiliza o mesmo processo do <br> aprendizado da língua materna: antes de ler ou escrever, o aluno fala.</h6>
+  </center>
+</div>
+
+<br>
+
+<div class="container mt-5 metodo2">
+  <center>
+    <h6>O aluno se comunica somente em inglês nas aulas, pois assim <br> adquire o domínio das quatro habilidades linguísticas:</h6>
+  </center>
+  <div class="circle-container">
+    <div class="circle">
+      <span class="circle-text">Compreensão oral</span>
+    </div>
+    <div class="circle">
+     <span class="circle-image">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M20.1498 7.2002H39.304C41.4539 7.2002 43.2008 8.9542 43.2008 11.113V22.8084C43.2008 24.9671 41.4539 26.7211 39.304 26.7211H37.8076V29.4503C37.8076 30.266 37.1479 30.8118 36.4516 30.8118C36.1279 30.8118 35.7981 30.6953 35.5293 30.4377L31.6325 26.7273H20.1498C17.9998 26.7273 16.253 24.9733 16.253 22.8145V11.113C16.253 8.9542 17.9998 7.2002 20.1498 7.2002ZM28.6702 31.6091V28.5119H30.4598V31.6091C30.4598 34.0193 28.5114 35.9757 26.111 35.9757H16.2957L13.1074 39.0176C12.7043 39.3978 12.1974 39.6002 11.6782 39.6002C11.3972 39.6002 11.1163 39.5389 10.8414 39.4223C10.0596 39.085 9.57711 38.343 9.57711 37.4905V35.9757H9.14956C6.74918 35.9757 4.80078 34.0193 4.80078 31.6091V21.2445C4.80078 18.8343 6.74918 16.8779 9.14956 16.8779H14.4695V18.6809H9.14956C7.74476 18.6809 6.59649 19.8278 6.59649 21.2445V31.6091C6.59649 33.0196 7.73865 34.1726 9.14956 34.1726H11.3728V37.4905C11.3728 37.6622 11.4889 37.7358 11.5561 37.7665C11.6232 37.791 11.7576 37.8217 11.8798 37.7051L15.5872 34.1726H26.1171C27.5219 34.1726 28.6702 33.0257 28.6702 31.6091Z" fill="white"/>
+        </svg>
+      </span>
+      <span class="circle-text">Fala</span>
+    </div>
+    <div class="circle">
+      <span class="circle-text">Leitura</span>
+    </div>
+    <div class="circle">
+      <span class="circle-text">Escrita</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.container {
+  max-width: 1184px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.metodo2 {
+  border-radius: 24px;
+  background: var(--adulto-cores-de-apoio-c-5-e-86-c, #C5E86C);
+  position: relative;
+  height: 237px;
+}
+
+.metodo2 h6 {
+  padding-top: 40px;
+  font-family: Museo Sans Rounded;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  color: #1E22BE;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 40px;
+  position: absolute;
+  bottom: -84px;
+  left: 0;
+  right: 0;
+}
+
+.circle {
+  position: relative;
+  width: 184px;
+  height: 184px;
+  background-color: var(--adulto-cores-principais-1-e-22-be, #1E22BE);
+  border-radius: 50%;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-text {
+  font-family: Museo Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: #C5E86C;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.circle-image {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .circle-text {
+    margin-top: 10px; /* Ajuste conforme necessário */
+  }
+
+ .circle-image {
+    width: 48px;
+    height: 48px;
+    top: -12px;
+  }
+}
+</style>

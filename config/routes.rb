@@ -1,12 +1,42 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root to: 'mains#home'
+
+  resources :main
+  # Rotas adicionais
+  get '/home', to: 'mains#home', as: 'home'
+  get '/pra_mim', to: 'mains#pra_mim', as: 'pra_mim'
+  get '/nivel1', to: 'mains#nivel1', as: 'nivel1'
+  post '/nivel1', to: 'mains#nivel1_post', as: 'nivel1_post'
+  get '/nivel2', to: 'mains#nivel2', as: 'nivel2'
+  post '/nivel2', to: 'mains#nivel2_post', as: 'nivel2_post'
+  get '/nivel3', to: 'mains#nivel3', as: 'nivel3'
+  post '/nivel3', to: 'mains#nivel3_post', as: 'nivel3_post'
+  get '/nivel4', to: 'mains#nivel4', as: 'nivel4'
+  post '/nivel4', to: 'mains#nivel4_post', as: 'nivel4_post'
+  get '/nivel5', to: 'mains#nivel5', as: 'nivel5'
+  post '/nivel5', to: 'mains#nivel5_post', as: 'nivel5_post'
+  get '/nivel6', to: 'mains#nivel6', as: 'nivel6'
+  post '/nivel6', to: 'mains#nivel6_post', as: 'nivel6_post'
+  get '/nivelamento', to: 'mains#nivelamento', as: 'nivelamento'
+  post '/nivelamento', to: 'mains#nivelamento', as: 'nivelamento_post'
+
+  get 'contato', to: 'mains#contato', as: 'contato'
+  post '/contato', to: 'mains#contato', as: 'contato_post'
+
+  get '/fale_conosco', to: 'mains#fale_conosco', as: 'fale_conosco'
+  post '/fale_conosco', to: 'mains#fale_conosco_post', as: 'fale_conosco_post'
+
+  get '/concluido', to: 'mains#concluido', as: 'concluido'
+  get '/curso', to: 'mains#curso', as: 'curso'
+  get '/tipo', to: 'mains#tipo', as: 'tipo'
+  get '/prek', to: 'mains#prek', as: 'prek'
+  get '/kids', to: 'mains#kids', as: 'kids'
+  get '/metodo', to: 'mains#metodo', as: 'metodo'
+  get 'cancelado', to: 'mains#cancelado', as: 'cancelado'
+  get '/mains/new', to: 'mains#new', as: 'mains_new'
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
-
-  # Defines the root path route ("/")
-  # root "posts#index"
 end

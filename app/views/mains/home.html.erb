@@ -1,0 +1,241 @@
+<div>
+  <%= render "shared/navbar" %>
+</div>
+
+  <div class="container-fluid">
+    <div class="row no-gutter nivelamento">
+      <div class="col-md-6 d-none d-md-flex bg-image"></div>
+        <div class="col-md-6 nivel">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-xl-8 mx-auto">
+                <h3 class="nivel">Descubra o nível <br>
+                do seu inglês!</h3> <br>
+                  <h6 class="nivel2"> O nosso teste de nivelamento te <br>
+                  ajuda a descobrir em que módulo você deve <br>
+                  ingressar. Comece o seu agora mesmo! </h6>
+                   <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel">Fazer teste de nivelamento<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<body>
+    <div class="container">
+      <div class="alunonivel">
+          <div class="row gy-5 nome">
+            <div class="p-3 h4 nome2"><strong>Precisa de ajuda? Preencha abaixo e fale com um especialista do BRASAS</strong></div>
+                <%= simple_form_for :student, data: { turbo: false } do |f| %>
+                <div class="container">
+                    <form id="contact-form" method="post" action="contact.php" role="form">
+                      <div class="messages"></div>
+                        <div class="controls">
+                          <div class="row">
+                            <div class="col-sm-4">
+                              <div class="form-group">
+                                <%= f.input :name, label: 'NOME COMPLETO', placeholder:'Insira seu nome', id:'student_name' %>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <%= f.input :telefone, label: 'CELULAR/WHATSAPP', placeholder:'(ddd)xxxxx-xxxx', id:'student_telefone' %>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <%= f.input :uf, label: 'ESTADO', placeholder:'Selecione um estado', id:'student_estado' %>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <%= f.input :email, label: 'E-MAIL', placeholder:'Insira seu e-mail', id:'student_email' %>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <%= f.input :nascimento, label: 'DATA DE NASCIMENTO', placeholder:'xx/xx/xxxx', id:'student_nascimento' %>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <%= f.input :modulo, label: 'EM QUAL NÍVEL DESEJA INICIAR?', placeholder:'Selecione um nível', id:'student_modulo' %>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                                <label class="concordo">CONCORDO EM RECEBER COMUNICAÇÕES DE OFERTAS DO BRASAS ATRAVÉS DE:</label>
+                             <div class="col-sm-4">
+                                <div class="form-group formas">
+                                    <%= f.collection_check_boxes :modulo, [['Whatsapp', 'Whatsapp'], ['Telefone', 'Telefone'], ['E-mail', 'E-mail'], ['SMS', 'SMS']], :first, :last, id:'student_contato' %>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            </div>
+                          </div>
+                    </form>
+                </div>
+          </div>
+                  <div class="col-12 formas1">
+                    <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastroformas">Enviar</a>
+                  </div>
+                <% end %>
+      </div>
+    </div>
+
+      <center><h2 class="conheca mt-5"><strong>Conheça nossos cursos</strong></h2></center>
+
+      <div class="col-12 tipodecursos">
+        <div class="cards1">
+          <div class="card-category1" color="white">
+            <center>Pre-k <br>
+            <h6 class="mod mt-3">A partir do Pré-2</h6></center>
+          </div>
+
+          <div class="card-category1" color="white">
+            <center>Kids <br>
+            <h6 class="mod mt-3">3º ano do Ensino Fundamental</h6></center>
+          </div>
+
+          <div class="card-category1" color="white">
+            <center>Juniors & Teens <br>
+            <h6 class="mod mt-3">6º ano do Ensino Fundamental</h6></center>
+          </div>
+
+          <div class="card-category1" color="white">
+            <center>Adults <br>
+            <h6 class="mod mt-3">A partir de 14 anos</h6></center>
+          </div>
+
+          <div class="card-category1 centralize" color="white">
+            <center>BRASAS Online <br>
+            <h6 class="mod mt-3">Aprenda com aulas online e ao vivo</h6></center>
+          </div>
+
+          <div class="card-category1 centralize" color="white">
+            <center>Certificação Internacional <br>
+            <h6 class="mod mt-3">Cursos preparatórios e prova</h6></center>
+          </div>
+
+          <div class="card-category1 centralize" color="white">
+            <center>Parcerias <br>
+            <h6 class="mod mt-3">Escolas, Universidades e Empresas</h6></center>
+          </div>
+        </div>
+      </div>
+
+      <center><h2 class="conheca mt-5 mb-5"><strong>Quem faz o BRASAS, indica!</strong></h2></center>
+
+      <section class="testimonial text-center">
+        <div class="container">
+
+            <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="testimonial4_slide">
+                            <img src="https://res.cloudinary.com/ddxlnxcu5/image/upload/v1678197532/WhatsApp-Image-2021-02-25-at-23.51.28_bosy8m.jpg" class="img-circle img-responsive" />
+                            <p>Tenho aproveitado muito o curso na modalidade on-line. É mais prático, mais focado e até mesmo mais confortável. Além disso, estudar a distância é o que me permite aproveitar todos os benefícios do método BRASAS, mesmo eu morando fora do Brasil.</p>
+                            <h4>Fabiana Arruda</h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <img src="https://res.cloudinary.com/ddxlnxcu5/image/upload/v1678197532/Giovana_gjsjx8.png" class="img-circle img-responsive" />
+                            <p>Com as aulas online, não sentimos diferença no aprendizado e na pronúncia, pelo contrário, ficaram até mais puxadas. Estamos muito familiarizados com a escola, o site, a secretaria e todo material didático, sem falar na teacher Ge, que é ótima.</p>
+                            <h4>Giovana Sé de Fazio</h4>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial4_slide">
+                            <img src="https://res.cloudinary.com/ddxlnxcu5/image/upload/v1678197532/Luiz-Fernando_mkb7d6.png" class="img-circle img-responsive" />
+                            <p>O BRASAS tem um ótimo interesse pelo aluno, com excelentes professores e uma tecnologia completa de áudio, secretaria virtual, Google Classroom, gramática digital e online books.</p>
+                            <h4>Luiz Fernando de Fazio</h4>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#testimonial4" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+      <div class="col-12 tipodecursos mb-5">
+        <div class="cards">
+          <div class="card-category2" color="white">
+            <center>Quem somos <br>
+            <h6 class="mod mt-3 mb-5">Um curso com mais de 50 anos de tradição <br>
+            e experiência do ensino da língua inglesa. <br>
+            Conheça a nossa história e propósito.</h6></center>
+            <center><a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel6">Saiba mais<i class="fa-sharp fa-solid fa-arrow-right"></i></a></center>
+          </div>
+
+          <div class="card-category3" color="white">
+            <center>Método BRASAS <br>
+            <h6 class="mod mt-3 mb-5">O BRASAS tem um método de ensino <br>
+            exclusivo e material didático próprio, <br>
+            desenvolvido para cada faixa etária.</h6></center>
+            <center><a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel8">Saiba mais<i class="fa-sharp fa-solid fa-arrow-right"></i></a></center>
+          </div>
+
+          <div class="card-category4" color="white">
+            <center>Unidades <br>
+            <h6 class="mod mt-3 mb-5">Mais de 20 unidades no Rio de Janeiro, <br>
+            além de outras espalhadas pelo Brasil. <br>
+            Encontre sua unidade e entre em contato.</h6></center>
+            <center><a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel9">Saiba mais<i class="fa-sharp fa-solid fa-arrow-right"></i></a></center>
+          </div>
+       </div>
+      </div>
+
+<div class="container-fluid">
+    <div class="row no-gutter nivelamento">
+        <div class="col-md-6 nivel3">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-xl-8 mx-auto ft">
+                <h3 class="nivel4">Faça parte da história <br>
+                 do BRASAS!</h3> <br>
+                  <h6 class="nivel2"> Junte-se a uma empresa que tem mais <br>
+                  de 55 anos de experiência no mercado <br>
+                  de ensino da língua inglesa. </h6>
+                   <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel5">Seja um franqueado!<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div><!-- End -->
+          </div>
+        </div>
+      <div class="col-md-6 d-none d-md-flex bg-image"></div>
+      </div>
+    </div>
+
+</body>
+    <%= render "shared/footer" %>
+
+<style>
+.mod{
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.nivel2 {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+body {
+  background-color: #EBFAFF !important;
+}
+
+body > .container {
+  background-color: transparent;
+}
+
+</style>

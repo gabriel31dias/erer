@@ -1,0 +1,180 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  background-color: #36bcee;
+}
+
+.banner h1 {
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.welcome {
+  color: #001e60 !important;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 60px !important;
+}
+
+// prek.html.erb
+
+#whatsapp {
+  width: 42px;
+  margin-left: 6px;
+}
+
+.prek1{
+  color: red;
+}
+
+.claf {
+  font-size: 14px;
+}
+
+.bg-form {
+background-color: #001e60;
+}
+
+.bg-quero {
+  background-color: #001e60;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.bg-mais {
+  background-color: white;
+  border-radius: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-bottom: 57px;
+}
+
+.whats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+  margin-top: 60px;
+  max-width: 100%;
+}
+
+.fa-whatsapp {
+  color: green;
+  font-size: 40px !important;
+  margin-right: 15px;
+  display: flex;
+  margin-left: 24px;
+}
+
+.fa-location-dot {
+  color: rgb(255, 255, 255);
+  font-size: 40px !important;
+  margin-left: 10px;
+  display: flex;
+}
+
+.atendente {
+  color: white;
+  font-size: 20px !important;
+  position: relative;
+  margin-top: -32px;
+  margin-left: 76px;
+}
+
+.nivel7 {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-left: 76px;
+  margin-right: 46px;
+}
+
+.falar {
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  display: inline;
+}
+
+.atendente1 {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.atendente2 {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  margin-top: -25px;
+  margin-bottom: 30px;
+}
+
+.teste2 {
+  color: black;
+  font-size: 14px;
+  margin-bottom: 40px;
+  line-height: 22px;
+}
+
+.teste3 {
+  color: black;
+  font-size: 35px;
+  margin-top: 15px;
+  margin-bottom: 21px;
+  font-weight: bold;
+  text-align: initial;
+}
+
+.teste2 {
+  color: black;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .whats {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .whats {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .whats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .whats {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .whats {
+    grid-template-columns: 1fr 1fr;
+  }
+}

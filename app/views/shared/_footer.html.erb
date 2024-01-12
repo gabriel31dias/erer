@@ -1,0 +1,241 @@
+<footer class="bg-light text-center text-lg-start back">
+    <div class="row foot">
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0 imagem">
+         <center><img src="https://res.cloudinary.com/ddxlnxcu5/image/upload/v1670340467/logo_brasas_2015-02__1_-removebg-preview_g81ytp.png"></center>
+
+        <center><hr class="linha1"></center>
+
+        <ul class="list-unstyled d-flex flex-row justify-content-center">
+          <li>
+                <a class="text px-2 siga" href="https://www.facebook.com/BRASASEnglishCourse/" target="_blank">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a class="text px-2 siga" href="https://www.instagram.com/brasasenglishcourse/" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a class="text ps-2 siga" href="https://www.tiktok.com/@brasasenglishcourse" target="_blank">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+              </li>
+                <li>
+                <a class="text ps-2 siga" href="https://www.youtube.com/channel/UCsmygXC8HjbbfcR2ehazymg" target="_blank">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </li>
+                <li>
+                <a class="text ps-2 siga" href="https://br.linkedin.com/company/brasas-english-course">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+        <ul class="list-unstyled brasas text-start">
+          <li class="mb-3">
+              <a href="#!" class="text">O BRASAS</a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text">MÉTODO</a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text">UNIDADES</a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text">INDIQUE E GANHE</a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text">BRASAS FEED</a>
+            </li>
+            <li class="mb-3">
+              <%= link_to "FALE CONOSCO", fale_conosco_path, class:"text" %>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text">TRABALHE CONOSCO</a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text">SEJA FRANQUEADO</a>
+            </li>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+        <ul class="list-unstyled mb-0 cursos text-start">
+          <li class="mb-3">
+              <a href="#!" class="text">CURSOS</a>
+            </li>
+            <li class="mb-2">
+              <a href="http://localhost:3000/prek" class="text">Pre-k</a>
+            </li>
+             <li class="mb-2">
+              <a href="#!" class="text">Kids</a>
+            </li>
+             <li class="mb-2">
+              <a href="#!" class="text">Juniors & Teens</a>
+            </li>
+             <li class="mb-2">
+              <a href="#!" class="text">Adults</a>
+            </li>
+             <li class="mb-2">
+              <a href="#!" class="text">Certificações Internacionais</a>
+            </li>
+             <li class="mb-2">
+              <a href="#!" class="text">BRASAS OnDemand</a>
+            </li>
+             <li class="mb-2">
+              <a href="#!" class="text">BRASAS Online English</a>
+            </li>
+             <li class="mb-2">
+              <a href="#!" class="text">Imersão</a>
+            </li>
+             <li class="mb-2">
+              <a href="#!" class="text">Conversation</a>
+            </li>
+             <li class="mb-2">
+              <a href="#!" class="text">Portuguese for Foreigners</a>
+            </li>
+             <li class="mb-2">
+              <a href="#!" class="text">Seniors</a>
+            </li>
+        </ul>
+      </div>
+
+    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+      <ul class="list-unstyled cursos">
+        <li class="d-flex align-items-center">
+          <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" class="ing">TESTE SEU INGLÊS</a>
+          <%= link_to 'http://my.brasas.com', target:"_blank", id:'my', class:'my-brasas' do %>
+            <i class="fa-solid fa-user"></i>&nbsp;&nbsp;MY BRASAS
+          <% end %>
+        </li>
+      </ul>
+    </div>
+
+<center><hr class="linha2"></center>
+
+  <div class="text-center p-3 direitos" style="background-color: rgba(0, 0, 0, 0.2);">
+     <h6><%= link_to "Política de Privacidade", root_path, class: "decoration" %></h6>
+     <h6><%= link_to "Termos de Uso", root_path, class: "decoration" %></h6>
+     <h6><%= link_to "Perguntas frequentes", root_path, class: "decoration" %></h6>
+     <h6><%= link_to "Mapa do Site", root_path, class: "decoration" %></h6>
+     <h6 class="decoration">© BRASAS: Todos os direitos reservados</h6>
+  </div>
+
+</footer>
+
+<style>
+  .back {
+    text-align: center !important;
+    background-color: #f5f5f5 !important;
+    padding-top: 30px;
+  }
+
+  .text {
+    font-size: small !important;
+    font-weight: bold !important;
+    height: 100px;
+    color: #1E22BE;
+  }
+
+  .linha1 {
+    width: 200px;
+  }
+
+  .linha2 {
+    border: 5px solid red;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .imagem {
+    margin-top: 80px;
+  }
+
+  .imagem img {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .brasas {
+    // margin-left: 2px;
+    margin-left: -33px;
+  }
+
+  .direitos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #001E60 !important;
+    color: white;
+    font-size: small;
+  }
+
+  .decoration {
+    color: white;
+    font-size: small;
+  }
+
+  .decoration:hover {
+    color: #c5e86c;
+  }
+
+  .fa-brands {
+    font-size: 24px;
+    margin-left: 7px;
+  }
+
+  .ing {
+    background-color: white;
+    border: 1px solid #001E60;
+    text-decoration: none;
+    color: #001E60;
+    border-radius: 8px;
+    padding-bottom: 16px;
+    padding-top: 14px;
+    padding-left: 14px;
+    padding-right: 10px;
+    width: 170px;
+    font-size: small !important;
+    font-weight: bolder !important;
+  }
+
+  .ing:hover {
+    color: white;
+    background-color: #1E22BE;
+    border-style: groove;
+  }
+
+  #my {
+    border-color: #515151;
+    background-color: #1E22BE;
+    color: #FFF;
+    border-radius: 8px;
+    padding-bottom: 16px;
+    padding-top: 14px;
+    font-size: small !important;
+    font-weight: bolder !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    margin-left: 10px;
+  }
+
+
+  .foot {
+      --bs-gutter-x: -0.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(-1 * var(--bs-gutter-y));
+      margin-right: calc(-.5 * var(--bs-gutter-x));
+      margin-left: calc(-.5 * var(--bs-gutter-x));
+  }
+</style>

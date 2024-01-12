@@ -1,0 +1,198 @@
+<%= render "shared/navbar" %>
+
+<div class="banner">
+  <h1 class="welcome">Fale conosco</h1>
+  <div class="text-center">
+    <h6>A gente adoraria ouvir o que você tem a dizer.</h6>
+    <h6>Mande uma mensagem abaixo.</h6>
+  </div>
+</div>
+
+<div class="container bg-quero" id="bg-quero">
+  <div class="row whats">
+    <div class="col-lg-12 col-xl-8 atendente1">
+      <div class="bg-mais">
+        <h1 class="teste1">Contato</h1>
+        <h1 class="teste2">Para enviar uma mensagem, é necessário preencher os campos.</h1>
+        <%= simple_form_for :student, url: fale_conosco_post_path, data: { turbo: false } do |f| %>
+          <div class="form-group">
+            <%= f.input :nomefale, label: 'NOME', placeholder:'Insira seu nome', id:'name', required: true %>
+          </div>
+
+          <div class="form-group">
+            <%= f.input :emailfale, label: 'E-MAIL', placeholder:'Insira seu e-mail', id:'student_email', required: true %>
+          </div>
+
+          <div class="form-group">
+            <%= f.input :telefonefale, label: 'TELEFONE', placeholder:'(ddd)xxxxx-xxxx', id:'student_telefone', required: true %>
+          </div>
+
+           <div class="form-group">
+              <%= f.input :mensagemfale, as: :text, label: 'MENSAGEM', placeholder: 'Insira sua mensagem', id: 'student_mensagem', required: true, input_html: { class: 'custom-textarea' } %>
+            </div>
+
+          <div class="form-group">
+            <%= f.input :acordo, as: :boolean, boolean_style: :inline, label: "Eu concordo em receber comunicações e ofertas personalizadas de acordo com meus interesses." %>
+          </div>
+
+          <div class="form-group text-center">
+            <%= f.button :submit, "Enviar", class: "btn btn-primary", id: "cadastronivel1" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="col-lg-12 col-xl-8 atendente1">
+      <div class="bg-mais1">
+        <h1 class="teste3">Quer falar com uma<br>Unidade específica?</h1>
+        <h1 class="teste4">Para informações sobre valor da mensalidade,<br>horários e promoções, entre em contato direto com<br>a unidade desejada.</h1>
+        <%= simple_form_for :student, url: contato_path, data: { turbo: false } do |f| %>
+          <div class="form-group text-center">
+            <%= link_to locations_path, class: "btn btn-primary", id: "cadastronivel2" do %>
+              Ver unidades&nbsp;&nbsp;<i class="fa-sharp fa-solid fa-arrow-right"></i>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>
+
+<style>
+  .custom-textarea {
+    height: 120px; /* Ajuste a altura conforme necessário */
+    resize: vertical;
+    margin-top: -81px;
+  }
+
+  .form-check-label, #student_acordo {
+    margin-top: 50px;
+  }
+
+  .text {
+    font-size: small !important;
+    font-weight: bold !important;
+    height: 100px;
+    color: black;
+  }
+
+  .teste1 {
+    color: black;
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 21px;
+    font-weight: bold;
+    text-align: initial;
+    padding-top: 20px;
+  }
+
+  .teste3 {
+    padding-left: 20px;
+  }
+
+  .teste4 {
+    color: black;
+    font-size: 14px;
+    margin-bottom: 40px;
+    text-align: initial;
+    line-height: 22px;
+    padding-left: 20px;
+  }
+
+  .teste3 {
+    color: black;
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 21px;
+    font-weight: bold;
+    text-align: initial;
+    padding-top: 20px;
+  }
+
+  .bg-mais {
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 1px;
+    padding-bottom: 41px;
+    margin-bottom: 57px;
+    margin-top: -100px;
+  }
+
+  .bg-mais1 {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 57px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: -100px;
+  }
+
+  #cadastronivel1 {
+    border-color:  #929292;
+    background-color: #929292;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px !important;
+    font-weight: bolder !important;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 90%;
+    text-align: center;
+  }
+
+  #cadastronivel1:hover {
+    border-color: #1E22BE;
+    background-color: #1E22BE;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px !important;
+    font-weight: bolder !important;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 90%;
+    text-align: center;
+  }
+
+  #cadastronivel2 {
+    border-color: #1E22BE;
+    background-color: white;
+    text-decoration: none;
+    color: #1E22BE;
+    border-radius: 8px;
+    font-size: 15px !important;
+    font-weight: bolder !important;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 90%;
+    text-align: center;
+  }
+
+  #cadastronivel2:hover {
+    border-color: #1E22BE;
+    background-color: #1E22BE;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px !important;
+    font-weight: bolder !important;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 90%;
+    text-align: center;
+  }
+</style>

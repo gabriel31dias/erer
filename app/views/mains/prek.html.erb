@@ -1,0 +1,153 @@
+<%= render "shared/navbar" %>
+
+ <%# <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @banner_settings.banner_url %>);">
+  <div class="container">
+    <center><h1><strong>Pre-K</strong></h1></center>
+    <center><p>Crianças aprendem se <span class="prek1">divertindo.</p></span></center>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <h6 class="claf">Cursos / Pré-K</h6> <br>
+</div>
+
+<div class="container mt-5">
+  <center><h6>São aulas divertidas em que as crianças participam de brincadeiras dinâmicas, todas</h6>
+  <h6>em inglês. Assim, começam a se familiarizar com a musicalidade da língua.</h6> <br>
+  <h6>Não trabalhamos com palavras escritas para não interferir no processo de </h6>
+  <h6>alfabetização da língua portuguesa.</h6></center>
+</div>
+<br>
+
+      <div class="col-12 tipodecursos mb-5">
+        <div class="cards">
+          <div class="card-category1" color="white">
+            <center> <br>
+            <h6 class="mod mt-3"></h6></center>
+          </div>
+
+          <div class="card-category1" color="white">
+            <center> <br>
+            <h6 class="mod mt-3"></h6></center>
+          </div>
+
+          <div class="card-category1" color="white">
+            <center> <br>
+            <h6 class="mod mt-3"></h6></center>
+          </div>
+        </div>
+      </div>
+      <br>
+
+<div class="container bg-quero" id="bg-quero">
+  <div class="row whats">
+    <div class="col-lg-12 col-xl-8 atendente1">
+      <div class="bg-mais">
+        <center>
+          <h1 class="teste3">Solicite um contato</h1>
+        </center>
+        <h1 class="teste2">Deixe os seus dados abaixo e entraremos em contato para mais informações.</h1>
+        <%= simple_form_for :student, url: contato_path, data: { turbo: false } do |f| %>
+          <div class="col">
+            <div class="form-group">
+              <%= f.input :nomecontato, label: 'NOME', placeholder:'Insira seu nome', id:'name', required: true %>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <%= f.input :emailcontato, label: 'E-MAIL', placeholder:'Insira seu e-mail', id:'student_email', required: true %>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <%= f.input :telefonecontato, label: 'TELEFONE', placeholder:'(ddd)xxxxx-xxxx', id:'student_telefone', required: true %>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <%= f.input :acordo, as: :boolean, boolean_style: :inline, label: "Eu concordo em receber comunicações e ofertas personalizadas de acordo com meus interesses." %>
+            </div>
+          </div>
+
+          <div class="avancar">
+            <%= f.button :submit, "Solicitar contato", class: "btn btn-primary", id: "cadastronivel7" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="falar">
+      <div class="col-lg-12 col-xl-8  atendente2">
+        <%= image_tag "zap.png", id: 'whatsapp' %>
+          <h3 class="atendente"><strong>Falar com um atendente</strong></h3> <br>
+          <h6 class="nivel7"> Clique aqui pra falar com um atendente via WhatsApp agora mesmo. </h6>
+        <br>
+        <i class="fa-solid fa-location-dot"></i>
+          <h3 class="atendente"><strong>Encontre uma unidade</strong></h3> <br>
+          <h6 class="nivel7"> Encontre a unidade mais próxima e informe-se sobre disponibilidade de turmas. </h6>
+          <br>
+          <br>
+        <%# <center><%= link_to "Encontrar unidade", locations_path, id:'cadastronivel7' %></center>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <center><h2 class="conheca mt-5"><strong>Conheça nossos cursos</strong></h2></center>
+
+      <div class="col-12 tipodecursos">
+        <div class="cards1">
+          <div class="card-category1" color="white">
+            <center>Pre-k <br>
+            <h6 class="mod mt-3">A partir do Pré-2</h6></center>
+          </div>
+
+          <div class="card-category1" color="white">
+            <center>Kids <br>
+            <h6 class="mod mt-3">3º ano do Ensino Fundamental</h6></center>
+          </div>
+
+          <div class="card-category1" color="white">
+            <center>Juniors & Teens <br>
+            <h6 class="mod mt-3">6º ano do Ensino Fundamental</h6></center>
+          </div>
+
+          <div class="card-category1" color="white">
+            <center>Adults <br>
+            <h6 class="mod mt-3">A partir de 14 anos</h6></center>
+          </div>
+
+          <div class="card-category1 centralize" color="white">
+            <center>BRASAS Online <br>
+            <h6 class="mod mt-3">Aprenda com aulas online e ao vivo</h6></center>
+          </div>
+
+          <div class="card-category1 centralize" color="white">
+            <center>Certificação Internacional <br>
+            <h6 class="mod mt-3">Cursos preparatórios e prova</h6></center>
+          </div>
+
+          <div class="card-category1 centralize" color="white">
+            <center>Parcerias <br>
+            <h6 class="mod mt-3">Escolas, Universidades e Empresas</h6></center>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<br>
+
+<%= render "shared/footer" %>
+<%= render "shared/flashes" %>
+
+<script>
+setTimeout(function() {
+var flashes = document.querySelectorAll('.alert');
+flashes.forEach(function(flash) {
+flash.style.display = 'none';
+});
+}, 3000);
+</script>

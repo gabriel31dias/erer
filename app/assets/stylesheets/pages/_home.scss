@@ -1,1 +1,1153 @@
 // Specific CSS for your home-page
+// index.html.erb
+.aluno {
+  box-sizing: border-box;
+  padding: 32px 0px;
+  gap: 24px;
+  max-width: 100%;
+  max-height: 100%;
+  background: #FFFFFF;
+  border: 1px solid #BCBEC0;
+  border-radius: 16px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  position: relative;
+  margin-top: -100px;
+}
+
+.controls {
+  margin-top: 40px;
+}
+
+#myInput {
+  margin-top: 50px;
+  margin-left: 160px;
+}
+
+body {
+  background-color: white;
+  font-family: "Museo Sans", sans-serif;
+}
+
+.box1 {
+  margin-top: -80px;
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+.box2 {
+  margin-top: -30px;
+  font-size: 13px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: match-parent;
+}
+
+.fa-sharp {
+  margin-left: 10px;
+}
+
+.menualunos {
+  margin-left: 15px;
+  border-color: #36bcee;
+  background-color: #36bcee;
+  color: #1E22BE;
+  height: 42px;
+  font-weight: bolder;
+  border-radius: 10px;
+  width: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Museo Sans", sans-serif;
+}
+
+.welcome {
+  margin-top: -100px;
+  font-family: "Museo Sans", sans-serif;
+}
+
+.destroy {
+  border: none;
+  color: red;
+  background-color: #e8e8e8;
+}
+
+.edit {
+  color: black;
+}
+
+.disable {
+  color: gray;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+
+.cadastro {
+  display: flex;
+  justify-content: center;
+}
+
+.atualizar {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.descricao1 {
+  font-size: 13px;
+  margin-top: 60px;
+}
+
+#descricao2 {
+  font-size: 15px;
+  margin-top: 60px;
+  margin-left: 192px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+p {
+  font-weight: bold;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0E0000;
+  background-color: #F4F4F4;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 2px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-bottom: 19px;
+}
+
+.ebrasas {
+  display: flex;
+  justify-content: center;
+}
+
+.aviso {
+  color: red;
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+
+.conecte {
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+// #teste{
+  // background-image: radial-gradient(circle at center, #899Dc4, #495D84);
+// }
+
+h1 {
+  font-family: "Museo Sans", sans-serif;
+  color: white;
+}
+
+.botao{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 70px;
+}
+
+#header {
+  margin: 0;
+  padding: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 24px;
+  margin-top: 60px;
+}
+
+.cards1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 24px;
+  margin-top: 60px;
+}
+
+#btns {
+  position: absolute;
+  margin-top: 190px;
+  color: #FFFFFF;
+  padding: 12px 16px;
+  gap: 8px;
+  width: 114px;
+  height: 50px;
+  background: #1E22BE;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+}
+
+#btns:hover {
+  opacity: 0.8;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #001e60;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 308px;
+  background: #FFFFFF;
+  border: 1px solid #001E60;
+}
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.nome {
+  margin-top: -60px;
+  margin-left: 5px;
+  width: 100%;
+}
+
+.nome1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -23px;
+  font-family: "Museo Sans", sans-serif;
+}
+
+.nome3 {
+  margin-top: -60px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.sair {
+  border-radius: 8px;
+  margin-left: 15px;
+}
+
+.button1 {
+  background: #c1e0eb;
+  border-radius: 20px;
+  width: 160px;
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.dist1 {
+  margin: auto;
+  padding: 4px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: #2c3f5a;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: #2c3f5a;
+}
+
+.branco {
+  color: white;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  justify-content: center;
+}
+
+.dados {
+  justify-content: space-between;
+}
+
+
+.cursos {
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  justify-content: center;
+}
+
+// cadastro.html.erb
+
+#cadastronivel5 {
+  border-color: #1E22BE;
+  background-color: #1E22BE;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px !important;
+  font-weight: bolder !important;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#cadastronivel5:hover {
+  color:#1E22BE;
+  background-color: white;
+}
+
+#cadastronivel6 {
+  border-color: #001E60;
+  background-color: #001E60;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px !important;
+  font-weight: bolder !important;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#cadastronivel6:hover {
+  color:#1E22BE;
+  background-color: white;
+}
+
+#cadastronivel8 {
+  border-color: #F18952;
+  background-color: #F18952;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px !important;
+  font-weight: bolder !important;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#cadastronivel8:hover {
+  color:#1E22BE;
+  background-color: white;
+}
+
+#cadastronivel9 {
+  border-color: #1E22BE;
+  background-color: #1E22BE;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px !important;
+  font-weight: bolder !important;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#cadastronivel9:hover {
+  color:#1E22BE;
+  background-color: white;
+}
+
+#cadastronivel7 {
+  border-color: #1E22BE;
+  background-color: #1E22BE;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px !important;
+  font-weight: bolder !important;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+#cadastronivel7:hover {
+  color:#1E22BE;
+  background-color: white;
+}
+
+.nivel3 {
+  background-color: #0057b8;
+  color: white;
+  font-weight: bolder;
+}
+
+.nivel4 {
+  background-color: #0057b8;
+  color: white;
+  font-weight: bolder;
+}
+
+.bg-image {
+  // background-image: url('https://res.cloudinary.com/ddxlnxcu5/image/upload/v1677764101/duas-universit%C3%A1rias-estudando-juntas-em-casa-com-laptops-enquanto-bebiam-caf%C3%A9-mulheres-multi%C3%A9tnicas-206995881_yid9np.jpg');
+  background-color: #1E22BE;
+  background-size: cover;
+  background-position: center center;
+}
+
+.nivel {
+  background-color: #1E22BE;
+  color: white;
+  font-weight: bolder;
+}
+
+.nivelamento {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+  height: 700px;
+}
+
+.nivelamento1 {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+  height: 300px;
+}
+
+.nivelamento2 {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+  height: 450px;
+}
+
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  margin-top: 100px;
+}
+
+.col-xl-7 {
+  flex: 0 0 auto;
+  width: 39.333%;
+}
+
+.alunonivel {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 0px;
+  gap: 24px;
+  max-width: 100%;
+  max-height: 100%;
+  background: #FFFFFF;
+  border: 1px solid #BCBEC0;
+  border-radius: 16px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  position: relative;
+  margin-top: -260px;
+}
+
+.nome2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -48px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.concordo {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+#student_name, #student_telefone, #student_uf, #student_email, #student_nascimento, #student_modulo {
+  border-radius: 10px;
+  height: 50px;
+  background-color: white;
+  font-size: 15px;
+}
+
+.formas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formas1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#cadastroformas {
+  border-color: #1E22BE;
+  background-color: #1E22BE;
+  border-style: groove;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px !important;
+  font-weight: bolder !important;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+#student_modulo_whatsapp, #student_modulo_telefone, #student_modulo_e-mail, #student_modulo_sms {
+  margin-right: 10px;
+}
+
+#cadastronivel {
+  border-color: #C8102E;
+  background-color: #C8102E;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px !important;
+  font-weight: bolder !important;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#cadastronivel:hover {
+  color:#1E22BE;
+  background-color: white;
+  border-style: none;
+}
+
+#cadastronivel2 {
+  border-color: #1E22BE;
+  background-color: #1E22BE;
+  // border-style: groove;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px !important;
+  font-weight: bolder !important;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  color: #001e60;
+  font-size: 24px;
+  font-weight: bold;
+  height: 269px;
+  width: 351px;
+  background: #FFFFFF;
+  border: 1px solid #B3B3B3;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.card-category1 {
+  display: flex;
+  justify-content: center;
+  color: #001E60;
+  font-size: 24px;
+  font-weight: bold;
+  height: 269px;
+  width: 351px;
+  background: #FFFFFF;
+  border: 1px solid #B3B3B3;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.card-category2 {
+  justify-content: center;
+  color: #001E60;
+  font-size: 24px;
+  font-weight: bold;
+  height: 450px;
+  width: 300px;
+  background: #DBD1E9;
+  border: 1px solid #DBD1E9;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.card-category3 {
+  justify-content: center;
+  color: #001E60;
+  font-size: 24px;
+  font-weight: bold;
+  height: 450px;
+  width: 300px;
+  background: #C5D97A;
+  border: 1px solid #C5D97A;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.card-category4 {
+  justify-content: center;
+  color: #001E60;
+  font-size: 24px;
+  font-weight: bold;
+  height: 450px;
+  width: 300px;
+  background: #97D5EF;
+  border: 1px solid #97D5EF;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.tipodecursos {
+  display: flex;
+  justify-content: center;
+}
+
+.ft {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  margin-top: 250px;
+}
+
+
+
+  // nivelamento.html.erb
+
+  #cadastronivel2 {
+    border-color: #1E22BE;
+    background-color: #1E22BE;
+    border-style: groove;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px !important;
+    font-weight: bolder !important;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .pramim {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pramim1 {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    padding-left: 83px;
+    padding-right: 83px;
+  }
+
+  .pramim2 {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px;
+  }
+
+  .pramim3 {
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -119px;
+    padding-left: 83px;
+    padding-right: 83px;
+    margin-top: -230px;
+  }
+
+  .pramim4 {
+    color: grey;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+
+  .bg-image1 {
+    background-color: #1E22BE;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .bg-image2 {
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .nivel2 {
+    margin-bottom: 40px;
+  }
+
+  .container-nivels {
+    display: flex;
+    justify-content: center;
+    margin-top: -140px;
+    margin-bottom: 55px;
+  }
+
+  .br1 {
+    margin-bottom: 10px;
+  }
+
+  .br2 {
+    margin-top: 10px;
+  }
+
+
+  // nivel1
+
+  .paramim {
+    color: black;
+  }
+
+  .teste {
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 60px;
+  }
+
+  .teste1 {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 60px;
+  }
+
+  #cadastronivel3 {
+    border-color: #bcbec0;
+    background-color: #bcbec0;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px !important;
+    font-weight: bolder !important;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  #cadastronivel3:hover {
+    color:white;
+    background-color: #1E22BE;
+    border-style: none;
+  }
+
+  .avancar {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #voltar {
+    font-size: 14px !important;
+    font-weight: bolder !important;
+    color: #1E22BE;
+  }
+
+  .bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px !important;
+    font-weight: bolder !important;
+    color: #1E22BE;
+    margin-top: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  .bar1 {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px ;
+  }
+
+  .progress {
+    --bs-progress-height: 1rem;
+    --bs-progress-font-size: 0.75rem;
+    --bs-progress-bg: #e9ecef;
+    --bs-progress-border-radius: 2px;
+    --bs-progress-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    --bs-progress-bar-color: #fff;
+    --bs-progress-bar-bg: #c5e86c;
+    --bs-progress-bar-transition: width 0.6s ease;
+    display: flex;
+    height: var(--bs-progress-height);
+    overflow: hidden;
+    font-size: var(--bs-progress-font-size);
+    background-color: var(--bs-progress-bg);
+    border-radius: 10px;
+    width: 200px;
+    color: black;
+    height: 25px;
+  }
+
+  [aria-valuenow] {
+    color: black;
+    font-size: 12px;
+  }
+
+
+  // nivel2.html.erb
+
+  .contato, .interesse {
+    font-size: 15px !important;
+  }
+
+  .form-check{
+    font-size: 16px !important;
+    margin-bottom: 5px;
+  }
+
+  #cadastronivel4 {
+    color: #1E22BE;
+    font-size: 15px !important;
+    font-weight: bolder !important;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-right: 30px;
+  }
+
+
+  // nivel3.html.erb
+
+  .category-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .category-item {
+    flex: 0 0 30%;
+  }
+
+  .category-selector {
+    position: absolute;
+    transform: scale(0);
+  }
+
+  .category-selector + label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 190px;
+    height: 150px;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: left;
+    border: 1px solid #bebebe;
+    border-radius: 20px;
+    background-color: white;
+    margin-bottom: 50px;
+    margin-top: 49px;
+  }
+
+  .category-selector:checked + label {
+    color: black !important;
+    background-color: #c5e86c;
+  }
+
+
+  #snippet_category_ruby + label {
+    color: #FD1015;
+  }
+
+  #snippet_category_ruby:checked + label {
+    background-color: #FD1015;
+    border-color: #FD1015;
+  }
+
+
+  #snippet_category_javascript + label {
+    color: #FFC65A;
+  }
+
+  #snippet_category_javascript:checked + label {
+    background-color: #FFC65A;
+    border-color: #FFC65A;
+  }
+
+
+  #snippet_category_css + label {
+    color: #62DDF5;
+  }
+
+  #snippet_category_css:checked + label {
+    background-color: #62DDF5;
+    border-color: #62DDF5;
+  }
+
+
+  // nivel4.html.erb e nivel5.html.erb
+
+  #first {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .avancar1 {
+    margin-top: 227px;
+    margin-bottom: 225px;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  // concluido
+
+  .concluido {
+    background-color: #1E22BE;
+  }
+
+  #concluido {
+    margin-top: 100px;
+  }
+
+  .testeconcluido {
+    font-size: 80px;
+    font-weight: bolder;
+    color: #c5e86c;
+    margin-bottom: 130px;
+  }
+
+  .testeconcluido1 {
+    font-size: 40px;
+    font-weight: bolder;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  .testeconcluido2 {
+    font-size: 25px;
+    color: #ffffff;
+  }
+
+  .paramim5 {
+    color: white;
+  }
+
+  .matricular {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  #matricular {
+    border-color: white;
+    background-color: #c5e86c;
+    border-style: none;
+    text-decoration: none;
+    color: #1E22BE;
+    border-radius: 8px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    width: 232px;
+    font-size: 16px;
+    font-weight: bolder !important;
+    height: 69px;
+  }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards1 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards1 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    .cards1 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+
+  // tipo.html.erb
+
+  .alunonivel1 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 0px;
+    gap: 24px;
+    max-width: 100%;
+    max-height: 100%;
+    background: #FFFFFF;
+    border: 1px solid #BCBEC0;
+    border-radius: 16px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    position: relative;
+    margin-top: -82px;
+    margin-bottom: 80px;
+  }
+
+  .or {
+    width: 200px;
+  }
+
+
+  .tab-pane {
+    padding-top: 3rem !important;
+  }
