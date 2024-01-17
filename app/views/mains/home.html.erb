@@ -69,14 +69,19 @@
                                 </div>
                             </div>
                                 <label class="concordo">CONCORDO EM RECEBER COMUNICAÇÕES DE OFERTAS DO BRASAS ATRAVÉS DE:</label>
-                             <div class="col-sm-4">
-                                <div class="form-group formas">
-                                    <%= f.collection_check_boxes :modulo, [['Whatsapp', 'Whatsapp'], ['Telefone', 'Telefone'], ['E-mail', 'E-mail'], ['SMS', 'SMS']], :first, :last, id:'student_contato' %>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
+                            <div class="col-sm-12">
+                              <div class="form-group formas">
+                                <%= f.collection_check_boxes :modulo, [['Whatsapp', 'Whatsapp'], ['Telefone', 'Telefone'], ['E-mail', 'E-mail'], ['SMS', 'SMS']], :first, :last, id: 'student_contato' do |b| %>
+                                  <% b.label(class: "checkbox-inline") do %>
+                                    <%= b.check_box %>
+                                    <%= b.text %>
+                                  <% end %>
+                                <% end %>
+                                <div class="help-block with-errors"></div>
+                              </div>
                             </div>
                           </div>
+                        </div>
                     </form>
                 </div>
           </div>
@@ -440,8 +445,14 @@
   line-height: 24px;
 }
 
-.formas {
-  width: 498px;
+.checkbox-inline {
+  margin-right: 30px;
+}
+
+.formas1{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 #cadastroformas {
@@ -459,12 +470,6 @@
   display: flex;
   justify-content: center;
   margin-top: -20px;
-}
-
-.collection_check_boxes {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
 }
 
 .conheca {
