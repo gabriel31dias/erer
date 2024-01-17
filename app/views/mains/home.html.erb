@@ -266,7 +266,7 @@
 }
 
 .bg-image1 {
-  background-color: #1E22BE;
+  background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705518494/Site%20brasas.com/34_p9tksb.png');
   background-size: cover;
   background-position: center center;
 }
@@ -541,4 +541,32 @@
   border-bottom-right-radius: 16px;
   margin-top: -40px;
 }
+
+/* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    .cards1 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .cards1 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .cards1 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .cards1 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 </style>
