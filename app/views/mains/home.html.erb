@@ -4,14 +4,14 @@
 
   <div class="container-fluid">
     <div class="row no-gutter nivelamento">
-      <div class="col-md-6 d-none d-md-flex bg-image"></div>
+      <div class="col-md-6 d-none d-md-flex bg-image1"></div>
         <div class="col-md-6 nivel">
           <div class="container">
             <div class="row">
               <div class="col-lg-12 col-xl-8 mx-auto">
                 <h3 class="nivel">Descubra o nível <br>
                 do seu inglês!</h3> <br>
-                  <h6 class="nivel2"> O nosso teste de nivelamento te <br>
+                  <h6 class="nivel1"> O nosso teste de nivelamento te <br>
                   ajuda a descobrir em que módulo você deve <br>
                   ingressar. Comece o seu agora mesmo! </h6>
                    <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel">Fazer teste de nivelamento<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-<body>
+
     <div class="container">
       <div class="alunonivel">
           <div class="row gy-5 nome">
@@ -40,7 +40,7 @@
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <%= f.input :telefone, label: 'CELULAR/WHATSAPP', placeholder:'(ddd)xxxxx-xxxx', id:'student_telefone' %>
+                                    <%= f.input :telefone, label: 'CELULAR/WHATSAPP', placeholder:'(ddd) xxxxx-xxxx', id:'student_telefone' %>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
       </div>
     </div>
 
-      <center><h2 class="conheca mt-5"><strong>Conheça nossos cursos</strong></h2></center>
+      <center><h2 class="conheca"><strong>Conheça nossos cursos</strong></h2></center>
 
       <div class="col-12 tipodecursos">
         <div class="cards1">
@@ -128,7 +128,7 @@
         </div>
       </div>
 
-      <center><h2 class="conheca mt-5 mb-5"><strong>Quem faz o BRASAS, indica!</strong></h2></center>
+      <center><h2 class="indica"><strong>Quem faz o BRASAS, indica!</strong></h2></center>
 
       <section class="testimonial text-center">
         <div class="container">
@@ -196,46 +196,288 @@
        </div>
       </div>
 
-<div class="container-fluid">
-    <div class="row no-gutter nivelamento">
-        <div class="col-md-6 nivel3">
+      <div class="row no-gutter nivelamento">
+        <div class="col-md-6 nivel3 bg-image2">
           <div class="container">
             <div class="row">
               <div class="col-lg-12 col-xl-8 mx-auto ft">
                 <h3 class="nivel4">Faça parte da história <br>
-                 do BRASAS!</h3> <br>
-                  <h6 class="nivel2"> Junte-se a uma empresa que tem mais <br>
+                  do BRASAS!</h3> <br>
+                <h6 class="nivel2"> Junte-se a uma empresa que tem mais <br>
                   de 55 anos de experiência no mercado <br>
-                  de ensino da língua inglesa. </h6>
-                   <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel5">Seja um franqueado!<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
+                  de ensino da língua inglesa.
+                </h6>
+                  <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel5">Seja um franqueado!<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
               </div>
-            </div><!-- End -->
+            </div>
           </div>
         </div>
-      <div class="col-md-6 d-none d-md-flex bg-image"></div>
+        <div class="col-md-6 d-none d-md-flex bg-image"></div>
       </div>
-    </div>
 
-</body>
     <%= render "shared/footer" %>
 
 <style>
-.mod{
-  font-size: 12px;
-  line-height: 1.5;
+  .mod {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  body {
+    background-color: #EBFAFF !important;
+  }
+
+  body > .container {
+    background-color: transparent;
+    margin-top: 100px;
+  }
+
+.bg-image {
+  background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322111/Site%20brasas.com/8_ccvr0x.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-image1 {
+  background-color: #1E22BE;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bg-image2 {
+  background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705424714/Site%20brasas.com/23_oajwyw.png');
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  color: #001e60;
+  font-size: 24px;
+  font-weight: bold;
+  background: #FFFFFF;
+  border: 1px solid #B3B3B3;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.card-category1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #001E60;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 32px;
+  width: 324px;
+  height: 264px;
+  background: #FFFFFF;
+  border: 1px solid #B3B3B3;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.card-category2 {
+  margin-right: 100px;
+  margin-bottom: 20px;
+  justify-content: center;
+  color: #001E60;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  height: 599px;
+  width: 394.67px;
+  background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322114/Site%20brasas.com/20_tcsiqc.png');
+  background-size: cover;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.card-category3 {
+  justify-content: center;
+  color: #001E60;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  height: 599px;
+  width: 394.67px;
+  background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322114/Site%20brasas.com/21_tt3pfx.png');
+  background-size: cover;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.card-category4 {
+  justify-content: center;
+  color: #001E60;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  height: 599px;
+  width: 394.67px;
+  background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322114/Site%20brasas.com/22_gatj5d.png');
+  background-size: cover;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.nivel {
+  background-color: #1E22BE;
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.nivel1 {
+  background-color: #1E22BE;
+  color: white;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  width: 519px;
+  margin-bottom: 30px;
 }
 
 .nivel2 {
-  font-size: 14px;
-  line-height: 1.5;
+  color: white;
+  weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 45px;
 }
 
-body {
-  background-color: #EBFAFF !important;
+.nivel4 {
+  color: white;
+  weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  margin-top: -64px;
 }
 
-body > .container {
-  background-color: transparent;
+#cadastronivel {
+  border-color: #C8102E;
+  background-color: #C8102E;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px !important;
+  font-weight: 600;
+  line-height: 24px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#cadastronivel:hover {
+  color:#1E22BE;
+  background-color: white;
+  border-style: none;
+}
+
+.nivelamento {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+  height: 682px;
+}
+
+.nome {
+  margin-top: -60px;
+  margin-left: 5px;
+  width: 100%;
+}
+
+.nome2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -48px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.alunonivel {
+  gap: 24px;
+  background: #FFFFFF;
+  border: 1px solid #BCBEC0;
+  border-radius: 16px;
+  width: 886px;
+  height: 472px;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls {
+  margin-top: 27px;
+}
+
+.form-label {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.concordo {
+  margin-bottom: 10px;
+  margin-top: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.formas {
+  width: 498px;
+}
+
+#cadastroformas {
+  width: 95px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 12px 24px 12px 24px;
+  gap: 8px;
+  background-color: #1E22BE;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.collection_check_boxes {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.conheca {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  margin-top: 430px;
+}
+
+.indica {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  margin-top: 200px;
 }
 
 </style>
