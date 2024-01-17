@@ -17,9 +17,7 @@
   margin-top: -100px;
 }
 
-.controls {
-  margin-top: 40px;
-}
+
 
 #myInput {
   margin-top: 50px;
@@ -199,7 +197,7 @@ img {
 
 .cards1 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 24px;
   margin-top: 60px;
 }
@@ -279,11 +277,7 @@ img {
   }
 }
 
-.nome {
-  margin-top: -60px;
-  margin-left: 5px;
-  width: 100%;
-}
+
 
 .nome1 {
   display: flex;
@@ -455,41 +449,12 @@ img {
   background-color: white;
 }
 
-.nivel3 {
-  background-color: #0057b8;
-  color: white;
-  font-weight: bolder;
-}
 
-.nivel4 {
-  background-color: #0057b8;
-  color: white;
-  font-weight: bolder;
-}
 
-.bg-image {
-  // background-image: url('https://res.cloudinary.com/ddxlnxcu5/image/upload/v1677764101/duas-universit%C3%A1rias-estudando-juntas-em-casa-com-laptops-enquanto-bebiam-caf%C3%A9-mulheres-multi%C3%A9tnicas-206995881_yid9np.jpg');
-  background-color: #1E22BE;
-  background-size: cover;
-  background-position: center center;
-}
 
-.nivel {
-  background-color: #1E22BE;
-  color: white;
-  font-weight: bolder;
-}
 
-.nivelamento {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-.5 * var(--bs-gutter-x));
-  margin-left: calc(-.5 * var(--bs-gutter-x));
-  height: 700px;
-}
+
+
 
 .nivelamento1 {
   --bs-gutter-x: 1.5rem;
@@ -524,43 +489,6 @@ img {
   width: 39.333%;
 }
 
-.alunonivel {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 32px 0px;
-  gap: 24px;
-  max-width: 100%;
-  max-height: 100%;
-  background: #FFFFFF;
-  border: 1px solid #BCBEC0;
-  border-radius: 16px;
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
-  position: relative;
-  margin-top: -260px;
-}
-
-.nome2 {
-  display: flex;
-  justify-content: center;
-  margin-bottom: -48px;
-}
-
-.form-label {
-  font-size: 14px;
-  font-weight: bolder;
-}
-
-.concordo {
-  margin-bottom: 10px;
-  margin-top: 20px;
-  font-size: 14px;
-  font-weight: bolder;
-}
 
 #student_name, #student_telefone, #student_uf, #student_email, #student_nascimento, #student_modulo {
   border-radius: 10px;
@@ -569,56 +497,15 @@ img {
   font-size: 15px;
 }
 
-.formas {
-  display: flex;
-  justify-content: space-between;
-}
 
-.formas1 {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
 
-#cadastroformas {
-  border-color: #1E22BE;
-  background-color: #1E22BE;
-  border-style: groove;
-  text-decoration: none;
-  color: white;
-  border-radius: 8px;
-  font-size: 15px !important;
-  font-weight: bolder !important;
-  padding-left: 18px;
-  padding-right: 18px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  display: flex;
-  justify-content: center;
-}
+
 
 #student_modulo_whatsapp, #student_modulo_telefone, #student_modulo_e-mail, #student_modulo_sms {
   margin-right: 10px;
 }
 
-#cadastronivel {
-  border-color: #C8102E;
-  background-color: #C8102E;
-  color: white;
-  border-radius: 8px;
-  font-size: 15px !important;
-  font-weight: bolder !important;
-  padding-left: 18px;
-  padding-right: 18px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
 
-#cadastronivel:hover {
-  color:#1E22BE;
-  background-color: white;
-  border-style: none;
-}
 
 #cadastronivel2 {
   border-color: #1E22BE;
@@ -635,72 +522,7 @@ img {
   padding-bottom: 15px;
 }
 
-.card {
-  display: flex;
-  justify-content: center;
-  color: #001e60;
-  font-size: 24px;
-  font-weight: bold;
-  height: 269px;
-  width: 351px;
-  background: #FFFFFF;
-  border: 1px solid #B3B3B3;
-  padding: 20px;
-  border-radius: 18px;
-}
 
-.card-category1 {
-  display: flex;
-  justify-content: center;
-  color: #001E60;
-  font-size: 24px;
-  font-weight: bold;
-  height: 269px;
-  width: 351px;
-  background: #FFFFFF;
-  border: 1px solid #B3B3B3;
-  padding: 20px;
-  border-radius: 18px;
-}
-
-.card-category2 {
-  justify-content: center;
-  color: #001E60;
-  font-size: 24px;
-  font-weight: bold;
-  height: 450px;
-  width: 300px;
-  background: #DBD1E9;
-  border: 1px solid #DBD1E9;
-  padding: 20px;
-  border-radius: 18px;
-}
-
-.card-category3 {
-  justify-content: center;
-  color: #001E60;
-  font-size: 24px;
-  font-weight: bold;
-  height: 450px;
-  width: 300px;
-  background: #C5D97A;
-  border: 1px solid #C5D97A;
-  padding: 20px;
-  border-radius: 18px;
-}
-
-.card-category4 {
-  justify-content: center;
-  color: #001E60;
-  font-size: 24px;
-  font-weight: bold;
-  height: 450px;
-  width: 300px;
-  background: #97D5EF;
-  border: 1px solid #97D5EF;
-  padding: 20px;
-  border-radius: 18px;
-}
 
 .tipodecursos {
   display: flex;
@@ -788,19 +610,6 @@ img {
     margin-bottom: 40px;
     padding-left: 30px;
     padding-right: 30px;
-  }
-
-
-  .bg-image1 {
-    background-color: #1E22BE;
-    background-size: cover;
-    background-position: center center;
-  }
-
-  .bg-image2 {
-    background-color: #ffffff;
-    background-size: cover;
-    background-position: center center;
   }
 
   .nivel2 {
@@ -1084,38 +893,31 @@ img {
     height: 69px;
   }
 
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards1 {
-    grid-template-columns: 1fr;
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    .cards1 {
+      grid-template-columns: 1fr;
+    }
   }
-}
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .cards1 {
-    grid-template-columns: 1fr;
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .cards1 {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
-}
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .cards1 {
-    grid-template-columns: 1fr 1fr;
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .cards1 {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
-}
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .cards1 {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
+  /* Extra large devices (large desktops, 1200px and up) */
   @media (min-width: 1200px) {
     .cards1 {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 
