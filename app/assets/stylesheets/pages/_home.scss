@@ -641,8 +641,6 @@ img {
   color: #001e60;
   font-size: 24px;
   font-weight: bold;
-  height: 269px;
-  width: 351px;
   background: #FFFFFF;
   border: 1px solid #B3B3B3;
   padding: 20px;
@@ -651,12 +649,13 @@ img {
 
 .card-category1 {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   color: #001E60;
   font-size: 24px;
   font-weight: bold;
-  height: 269px;
-  width: 351px;
+  width: 324px;
+  height: 264px;
   background: #FFFFFF;
   border: 1px solid #B3B3B3;
   padding: 20px;
