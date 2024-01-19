@@ -2,7 +2,22 @@
   <%= render "shared/navbar" %>
 </div>
 
-  <div class="container-fluid">
+<div class="banner" style="background-image: url(https://res.cloudinary.com/dgrsenrsa/image/upload/v1705518494/Site%20brasas.com/34_p9tksb.png);" id="bg-image1">
+  <div class="container-banner">
+     <h3 class="nivel">
+      Descubra o nível <br>
+      do seu inglês!
+    </h3> <br>
+    <h6 class="nivel1">
+      O nosso teste de nivelamento te <br>
+      ajuda a descobrir em que módulo você deve <br>
+      ingressar. Comece o seu agora mesmo! </h6>
+  </div>
+    <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel">Fazer teste de nivelamento<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
+</div>
+
+
+  <%# <div class="container-fluid">
     <div class="row no-gutter nivelamento">
       <div class="col-md-6 d-none d-md-flex bg-image1"></div>
         <div class="col-md-6 nivel">
@@ -20,7 +35,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> %>
 
     <div class="container">
       <div class="alunonivel">
@@ -271,17 +286,17 @@
   background-position: center;
 }
 
-.bg-image1 {
+#bg-image1 {
   background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705518494/Site%20brasas.com/34_p9tksb.png');
   background-size: cover;
-  background-position: center center;
+  background-position: center;
 }
 
 .bg-image2 {
   background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705424714/Site%20brasas.com/23_oajwyw.png');
   background-color: #ffffff;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
 }
 
 .card {
@@ -357,22 +372,38 @@
   border-radius: 18px;
 }
 
+.container-banner {
+  text-align: left;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: -35px;
+}
+
+.banner {
+  height: 682px;
+}
+
 .nivel {
-  background-color: #1E22BE;
   color: white;
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
+  display: flex;
+  justify-content: end;
+  margin: 0px 500px auto;
 }
 
 .nivel1 {
-  background-color: #1E22BE;
   color: white;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
-  width: 519px;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: end;
+  margin: 0px 313px 40px auto;
 }
 
 .nivel2 {
@@ -404,6 +435,7 @@
   padding-right: 18px;
   padding-top: 15px;
   padding-bottom: 15px;
+  margin-left: 1080px;
 }
 
 #cadastronivel:hover {
