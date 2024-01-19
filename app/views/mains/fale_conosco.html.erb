@@ -1,10 +1,17 @@
 <%= render "shared/navbar" %>
 
-<div class="banner">
-  <h1 class="welcome">Fale conosco</h1>
-  <div class="text-center">
-    <h6>A gente adoraria ouvir o que você tem a dizer.</h6>
-    <h6>Mande uma mensagem abaixo.</h6>
+<div class="banner" style="background-image: url(https://res.cloudinary.com/dgrsenrsa/image/upload/v1705685751/Site%20brasas.com/35_aoksho.png);" id="bg-image1">
+  <div class="container">
+    <center>
+      <div class="metodo">
+        Fale conosco <br>
+      </div>
+      <br>
+      <div class="metodos">
+        A gente adoraria ouvir o que você tem a dizer. <br>
+        Mande uma mensagem abaixo.
+      </div>
+    </center>
   </div>
 </div>
 
@@ -48,7 +55,7 @@
         <h1 class="teste4">Para informações sobre valor da mensalidade,<br>horários e promoções, entre em contato direto com<br>a unidade desejada.</h1>
         <%= simple_form_for :student, url: contato_path, data: { turbo: false } do |f| %>
           <div class="form-group text-center">
-            <%= link_to locations_path, class: "btn btn-primary", id: "cadastronivel2" do %>
+            <%= link_to "Ver unidades", class: "btn btn-primary", id: "cadastronivel2" do %>
               Ver unidades&nbsp;&nbsp;<i class="fa-sharp fa-solid fa-arrow-right"></i>
             <% end %>
           </div>
@@ -60,6 +67,24 @@
 <%= render "shared/footer" %>
 
 <style>
+  .bg-quero {
+    background-color: white;
+  }
+
+  .metodo {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 72px;
+    color: white;
+  }
+
+  .metodos {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: white;
+  }
+
   .custom-textarea {
     height: 120px; /* Ajuste a altura conforme necessário */
     resize: vertical;
@@ -119,6 +144,7 @@
     padding-bottom: 41px;
     margin-bottom: 57px;
     margin-top: -100px;
+    border: 1px solid #BCBEC0;
   }
 
   .bg-mais1 {
@@ -130,6 +156,7 @@
     text-align: center;
     padding-bottom: 30px;
     margin-top: -100px;
+    border: 1px solid #BCBEC0;
   }
 
   #cadastronivel1 {
