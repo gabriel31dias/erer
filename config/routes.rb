@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :main
   # Rotas adicionais
   get '/home', to: 'mains#home', as: 'home'
-  get '/pra_mim', to: 'mains#pra_mim', as: 'pra_mim'
   get '/nivel1', to: 'mains#nivel1', as: 'nivel1'
   post '/nivel1', to: 'mains#nivel1_post', as: 'nivel1_post'
   get '/nivel2', to: 'mains#nivel2', as: 'nivel2'
@@ -32,8 +31,21 @@ Rails.application.routes.draw do
   get '/tipo', to: 'mains#tipo', as: 'tipo'
   get '/prek', to: 'mains#prek', as: 'prek'
   get '/kids', to: 'mains#kids', as: 'kids'
-  get '/metodo', to: 'mains#metodo', as: 'metodo'
-  get 'cancelado', to: 'mains#cancelado', as: 'cancelado'
+  get '/jr_teens', to: 'mains#jr_teens', as: 'jr_teens'
+  get 'adults', to: 'mains#adults', as: 'adults'
+  get '/certificacoes', to: 'mains#certificacoes', as: 'certificacoes'
+  get '/on_demand', to: 'mains#on_demand', as: 'on_demand'
+  get '/bol', to: 'mains#bol', as: 'bol'
+  get 'imersao', to: 'mains#imersao', as: 'imersao'
+  get '/conversation', to: 'mains#conversation', as: 'conversation'
+  get '/pff', to: 'mains#pff', as: 'pff'
+  get '/seniors', to: 'mains#seniors', as: 'seniors'
+  get 'pra_mim', to: 'mains#pra_mim', as: 'pra_mim'
+
+
+
+
+
   get '/mains/new', to: 'mains#new', as: 'mains_new'
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

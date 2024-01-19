@@ -20,19 +20,19 @@
               CURSOS
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="http://localhost:3000/prek">Pre-k</a></li>
-              <li><a class="dropdown-item" href="http://localhost:3000/kids">Kids</a></li>
-              <li><a class="dropdown-item" href="#">Juniors & Teens</a></li>
-              <li><a class="dropdown-item" href="#">Adults</a></li>
-              <li><a class="dropdown-item" href="#">Certificações Internacionais</a></li>
-              <li><a class="dropdown-item" href="#">BRASAS On Demand</a></li>
-              <li><a class="dropdown-item" href="#">BRASAS Online English</a></li>
-              <li><a class="dropdown-item" href="#">Imersão</a></li>
-              <li><a class="dropdown-item" href="#">Conversation</a></li>
-              <li><a class="dropdown-item" href="#">Portuguese for Foreigners</a></li>
-              <li><a class="dropdown-item" href="#">Seniors</a></li>
+              <li><%= link_to "Pre-k", prek_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Kids", kids_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Juniors & Teens", jr_teens_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Adults", adults_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Certificações Internacionais", certificacoes_path, class: "dropdown-item" %></li>
+              <li><%= link_to "BRASAS On Demand", on_demand_path, class: "dropdown-item" %></li>
+              <li><%= link_to "BRASAS Online English", bol_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Imersão", imersao_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Conversation", conversation_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Portuguese for Foreigners", pff_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Seniors", seniors_path, class: "dropdown-item" %></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="http://localhost:3000/pra_mim">BRASAS pra mim</a></li>
+              <li><%= link_to "BRASAS pra mim", pra_mim_path, class: "dropdown-item" %></li>
             </ul>
           </li>
           <li class="nav-item">
