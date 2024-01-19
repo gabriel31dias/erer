@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   post '/fale_conosco', to: 'mains#fale_conosco_post', as: 'fale_conosco_post'
 
   get '/concluido', to: 'mains#concluido', as: 'concluido'
-  get '/curso', to: 'mains#curso', as: 'curso'
+  get '/cursos', to: 'mains#cursos', as: 'cursos'
   get '/tipo', to: 'mains#tipo', as: 'tipo'
   get '/prek', to: 'mains#prek', as: 'prek'
   get '/kids', to: 'mains#kids', as: 'kids'
