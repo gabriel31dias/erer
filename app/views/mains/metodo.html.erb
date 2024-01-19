@@ -58,9 +58,13 @@
   </center>
 </div>
 
-<div class="redonda">
-  <%= image_tag "metodo.png", style: "width:500px;" %>
+<div class="redondas">
+  <center>
+    <%= image_tag "metodo.png", class: "redonda" %>
+  </center>
 </div>
+
+<%= render "shared/footer" %>
 
 <style>
 .texto {
@@ -69,6 +73,12 @@
   line-height: 32px;
   color: #2C2C2C;
   margin-top: 165px;
+}
+
+.redonda {
+  width: 50%;
+  margin-top: 80px;
+  margin-bottom: 50px;
 }
 
 .container {
