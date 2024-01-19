@@ -32,6 +32,9 @@ Rails.application.routes.draw do
   get '/trabalhe', to: 'mains#trabalhe', as: 'trabalhe'
   post '/trabalhe', to: 'mains#trabalhe', as: 'trabalhe_post'
 
+  get 'contato', to: 'mains#contato', as: 'contato'
+  post 'contato', to: 'mains#contato', as: 'contato_post'
+
   get '/franqueado', to: 'mains#franqueado', as: 'franqueado'
 
   get '/concluido', to: 'mains#concluido', as: 'concluido'
