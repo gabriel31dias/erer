@@ -1,0 +1,228 @@
+<div>
+  <%= render "shared/navbar" %>
+</div>
+
+  <div class="banner" style="background-image: url(https://res.cloudinary.com/dgrsenrsa/image/upload/v1705324013/Site%20brasas.com/30_dl5kol.png);" id="bg-image1">
+    <div class="container-banner">
+      <h3 class="nivel">
+        Cursos
+      </h3> <br>
+      <h6 class="nivel1">
+        O foco de todas as nossas aulas é a conversação. Aprenda a falar e a pensar em  <br>
+        inglês, além de usar corretamente o vocabulário, a gramática e as estruturas da  <br>
+        língua. Encontre o curso que mais se encaixa nos seus objetivos e faixa etária.
+      </h6>
+    </div>
+  </div>
+
+  <div class="col-12 tipodecursos">
+    <div class="cards1">
+      <div class="card-category1" color="white">
+        <center>
+          Pre-k <br>
+          <h6 class="mod mt-3">A partir do Pré-2</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516500/Site%20brasas.com/1_wkozwz-removebg-preview_edqwan.png" alt="Descrição da imagem" class="imagem-card">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          Kids <br>
+          <h6 class="mod mt-3">3º ano do Ensino Fundamental</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516715/Site%20brasas.com/2_kw3u8k-removebg-preview_gf0sze.png" alt="Descrição da imagem" class="imagem-card1">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          Juniors & Teens <br>
+          <h6 class="mod mt-3">6º ano do Ensino Fundamental</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516823/Site%20brasas.com/3_gwu1gm-removebg-preview_a1g4y8.png" alt="Descrição da imagem" class="imagem-card2">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          Adults <br>
+          <h6 class="mod mt-3">A partir de 14 anos</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516897/Site%20brasas.com/4_rsdkid-removebg-preview_inylag.png" alt="Descrição da imagem" class="imagem-card">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          BRASAS Online <br>
+          <h6 class="mod mt-3">Aprenda com aulas online e ao vivo</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516987/Site%20brasas.com/5_qd6zbf-removebg-preview_bl5s9t.png" alt="Descrição da imagem" class="imagem-card3">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          Certificação Internacional <br>
+          <h6 class="mod mt-3">Cursos preparatórios e prova</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705517093/Site%20brasas.com/6_n3h31m-removebg-preview_wd8t9m.png" alt="Descrição da imagem" class="imagem-card">
+        </center>
+      </div>
+
+      <div class="card-category1" color=  "white">
+        <center>
+          Parcerias <br>
+          <h6 class="mod mt-3">Escolas, Universidades e Empresas</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705517187/Site%20brasas.com/7_blgxte-removebg-preview_cbgbsj.png" alt="Descrição da imagem" class="imagem-card">
+        </center>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+ <%= render "shared/footer" %>
+
+<style>
+  .mod {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  body {
+    background-color: #EBFAFF !important;
+  }
+
+  body > .container {
+    background-color: transparent;
+    margin-top: 100px;
+  }
+
+  .tipodecursos {
+    display: flex;
+    justify-content: center;
+  }
+
+  #bg-image1 {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-category1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #001E60;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+    width: 324px;
+    height: 264px;
+    background: #FFFFFF;
+    border: 1px solid #B3B3B3;
+    padding: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .container-banner {
+    text-align: left;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 38px;
+  }
+
+  .banner {
+    height: 682px;
+  }
+
+  .nivel {
+    color: white;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 72px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nivel1 {
+    color: white;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .imagem-card {
+    width: 324px;
+    height: auto;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  .imagem-card1 {
+    width: 324px;
+    height: auto;
+    position: relative;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    margin-top: -40px;
+  }
+
+  .imagem-card2 {
+    width: 324px;
+    height: auto;
+    position: relative;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    margin-top: -10px;
+  }
+
+  .imagem-card3 {
+    width: 324px;
+    height: auto;
+    position: relative;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    margin-top: -32px;
+  }
+
+  .cards1 {
+    display: flex;
+    justify-content: center;
+    max-width: 1400px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      .cards1 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+      .cards1 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+      .cards1 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+      .cards1 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+</style>
