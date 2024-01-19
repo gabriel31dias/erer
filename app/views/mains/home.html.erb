@@ -2,261 +2,240 @@
   <%= render "shared/navbar" %>
 </div>
 
-<div class="banner" style="background-image: url(https://res.cloudinary.com/dgrsenrsa/image/upload/v1705518494/Site%20brasas.com/34_p9tksb.png);" id="bg-image1">
-  <div class="container-banner">
-     <h3 class="nivel">
-      Descubra o nível <br>
-      do seu inglês!
-    </h3> <br>
-    <h6 class="nivel1">
-      O nosso teste de nivelamento te <br>
-      ajuda a descobrir em que módulo você deve <br>
-      ingressar. Comece o seu agora mesmo! </h6>
+  <div class="banner" style="background-image: url(https://res.cloudinary.com/dgrsenrsa/image/upload/v1705518494/Site%20brasas.com/34_p9tksb.png);" id="bg-image1">
+    <div class="container-banner">
+      <h3 class="nivel">
+        Descubra o nível <br>
+        do seu inglês!
+      </h3> <br>
+      <h6 class="nivel1">
+        O nosso teste de nivelamento te <br>
+        ajuda a descobrir em que módulo você deve <br>
+        ingressar. Comece o seu agora mesmo! </h6>
+    </div>
+      <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel">Fazer teste de nivelamento<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
   </div>
-    <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel">Fazer teste de nivelamento<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
-</div>
 
-
-  <%# <div class="container-fluid">
-    <div class="row no-gutter nivelamento">
-      <div class="col-md-6 d-none d-md-flex bg-image1"></div>
-        <div class="col-md-6 nivel">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12 col-xl-8 mx-auto">
-                <h3 class="nivel">Descubra o nível <br>
-                do seu inglês!</h3> <br>
-                  <h6 class="nivel1"> O nosso teste de nivelamento te <br>
-                  ajuda a descobrir em que módulo você deve <br>
-                  ingressar. Comece o seu agora mesmo! </h6>
-                   <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel">Fazer teste de nivelamento<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> %>
-
-    <div class="container">
-      <div class="alunonivel">
-          <div class="row gy-5 nome">
-            <div class="p-3 h4 nome2"><strong>Precisa de ajuda? Preencha abaixo e fale com um especialista do BRASAS</strong></div>
-                <%= simple_form_for :student, data: { turbo: false } do |f| %>
-                <div class="container">
-                    <form id="contact-form" method="post" action="contact.php" role="form">
-                      <div class="messages"></div>
-                        <div class="controls">
-                          <div class="row">
-                            <div class="col-sm-4">
+  <div class="container">
+    <div class="alunonivel">
+        <div class="row gy-5 nome">
+          <div class="p-3 h4 nome2"><strong>Precisa de ajuda? Preencha abaixo e fale com um especialista do BRASAS</strong></div>
+              <%= simple_form_for :student, data: { turbo: false } do |f| %>
+              <div class="container">
+                  <form id="contact-form" method="post" action="contact.php" role="form">
+                    <div class="messages"></div>
+                      <div class="controls">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                              <%= f.input :name, label: 'NOME COMPLETO', placeholder:'Insira seu nome', id:'student_name' %>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                          <div class="col-sm-4">
                               <div class="form-group">
-                                <%= f.input :name, label: 'NOME COMPLETO', placeholder:'Insira seu nome', id:'student_name' %>
-                                <div class="help-block with-errors"></div>
+                                  <%= f.input :telefone, label: 'CELULAR/WHATSAPP', placeholder:'(ddd) xxxxx-xxxx', id:'student_telefone' %>
+                                  <div class="help-block with-errors"></div>
                               </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <%= f.input :telefone, label: 'CELULAR/WHATSAPP', placeholder:'(ddd) xxxxx-xxxx', id:'student_telefone' %>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <%= f.input :uf, label: 'ESTADO', placeholder:'Selecione um estado', id:'student_estado' %>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <%= f.input :email, label: 'E-MAIL', placeholder:'Insira seu e-mail', id:'student_email' %>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <%= f.input :nascimento, label: 'DATA DE NASCIMENTO', placeholder:'xx/xx/xxxx', id:'student_nascimento' %>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <%= f.input :modulo, label: 'EM QUAL NÍVEL DESEJA INICIAR?', placeholder:'Selecione um nível', id:'student_modulo' %>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                                <label class="concordo">CONCORDO EM RECEBER COMUNICAÇÕES DE OFERTAS DO BRASAS ATRAVÉS DE:</label>
-                            <div class="col-sm-12">
-                              <div class="form-group formas">
-                                <%= f.collection_check_boxes :modulo, [['Whatsapp', 'Whatsapp'], ['Telefone', 'Telefone'], ['E-mail', 'E-mail'], ['SMS', 'SMS']], :first, :last, id: 'student_contato' do |b| %>
-                                  <% b.label(class: "checkbox-inline") do %>
-                                    <%= b.check_box %>
-                                    <%= b.text %>
-                                  <% end %>
+                          </div>
+                          <div class="col-sm-4">
+                              <div class="form-group">
+                                  <%= f.input :uf, label: 'ESTADO', placeholder:'Selecione um estado', id:'student_estado' %>
+                                  <div class="help-block with-errors"></div>
+                              </div>
+                          </div>
+                          <div class="col-sm-4">
+                              <div class="form-group">
+                                  <%= f.input :email, label: 'E-MAIL', placeholder:'Insira seu e-mail', id:'student_email' %>
+                                  <div class="help-block with-errors"></div>
+                              </div>
+                          </div>
+                          <div class="col-sm-4">
+                              <div class="form-group">
+                                  <%= f.input :nascimento, label: 'DATA DE NASCIMENTO', placeholder:'xx/xx/xxxx', id:'student_nascimento' %>
+                                  <div class="help-block with-errors"></div>
+                              </div>
+                          </div>
+                          <div class="col-sm-4">
+                              <div class="form-group">
+                                  <%= f.input :modulo, label: 'EM QUAL NÍVEL DESEJA INICIAR?', placeholder:'Selecione um nível', id:'student_modulo' %>
+                                  <div class="help-block with-errors"></div>
+                              </div>
+                          </div>
+                              <label class="concordo">CONCORDO EM RECEBER COMUNICAÇÕES DE OFERTAS DO BRASAS ATRAVÉS DE:</label>
+                          <div class="col-sm-12">
+                            <div class="form-group formas">
+                              <%= f.collection_check_boxes :modulo, [['Whatsapp', 'Whatsapp'], ['Telefone', 'Telefone'], ['E-mail', 'E-mail'], ['SMS', 'SMS']], :first, :last, id: 'student_contato' do |b| %>
+                                <% b.label(class: "checkbox-inline") do %>
+                                  <%= b.check_box %>
+                                  <%= b.text %>
                                 <% end %>
-                                <div class="help-block with-errors"></div>
-                              </div>
+                              <% end %>
+                              <div class="help-block with-errors"></div>
                             </div>
                           </div>
                         </div>
-                    </form>
+                      </div>
+                  </form>
+              </div>
+        </div>
+                <div class="col-12 formas1">
+                  <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastroformas">Enviar</a>
                 </div>
-          </div>
-                  <div class="col-12 formas1">
-                    <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastroformas">Enviar</a>
-                  </div>
-                <% end %>
+              <% end %>
+    </div>
+  </div>
+
+  <center><h2 class="conheca"><strong>Conheça nossos cursos</strong></h2></center>
+
+  <div class="col-12 tipodecursos">
+    <div class="cards1">
+      <div class="card-category1" color="white">
+        <center>
+          Pre-k <br>
+          <h6 class="mod mt-3">A partir do Pré-2</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516500/Site%20brasas.com/1_wkozwz-removebg-preview_edqwan.png" alt="Descrição da imagem" class="imagem-card">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          Kids <br>
+          <h6 class="mod mt-3">3º ano do Ensino Fundamental</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516715/Site%20brasas.com/2_kw3u8k-removebg-preview_gf0sze.png" alt="Descrição da imagem" class="imagem-card1">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          Juniors & Teens <br>
+          <h6 class="mod mt-3">6º ano do Ensino Fundamental</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516823/Site%20brasas.com/3_gwu1gm-removebg-preview_a1g4y8.png" alt="Descrição da imagem" class="imagem-card2">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          Adults <br>
+          <h6 class="mod mt-3">A partir de 14 anos</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516897/Site%20brasas.com/4_rsdkid-removebg-preview_inylag.png" alt="Descrição da imagem" class="imagem-card">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          BRASAS Online <br>
+          <h6 class="mod mt-3">Aprenda com aulas online e ao vivo</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516987/Site%20brasas.com/5_qd6zbf-removebg-preview_bl5s9t.png" alt="Descrição da imagem" class="imagem-card3">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          Certificação Internacional <br>
+          <h6 class="mod mt-3">Cursos preparatórios e prova</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705517093/Site%20brasas.com/6_n3h31m-removebg-preview_wd8t9m.png" alt="Descrição da imagem" class="imagem-card">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          Parcerias <br>
+          <h6 class="mod mt-3">Escolas, Universidades e Empresas</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705517187/Site%20brasas.com/7_blgxte-removebg-preview_cbgbsj.png" alt="Descrição da imagem" class="imagem-card">
+        </center>
       </div>
     </div>
+  </div>
 
-      <center><h2 class="conheca"><strong>Conheça nossos cursos</strong></h2></center>
+  <center><h2 class="indica"><strong>Quem faz o BRASAS, indica!</strong></h2></center>
 
-      <div class="col-12 tipodecursos">
-        <div class="cards1">
-          <div class="card-category1" color="white">
-            <center>
-              Pre-k <br>
-              <h6 class="mod mt-3">A partir do Pré-2</h6>
-              <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516500/Site%20brasas.com/1_wkozwz-removebg-preview_edqwan.png" alt="Descrição da imagem" class="imagem-card">
-            </center>
-          </div>
+  <section class="testimonial text-center">
+    <div class="container">
 
-          <div class="card-category1" color="white">
-            <center>
-              Kids <br>
-              <h6 class="mod mt-3">3º ano do Ensino Fundamental</h6>
-              <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516715/Site%20brasas.com/2_kw3u8k-removebg-preview_gf0sze.png" alt="Descrição da imagem" class="imagem-card1">
-            </center>
-          </div>
+        <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
 
-          <div class="card-category1" color="white">
-            <center>
-              Juniors & Teens <br>
-              <h6 class="mod mt-3">6º ano do Ensino Fundamental</h6>
-              <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516823/Site%20brasas.com/3_gwu1gm-removebg-preview_a1g4y8.png" alt="Descrição da imagem" class="imagem-card2">
-            </center>
-          </div>
-
-          <div class="card-category1" color="white">
-            <center>
-              Adults <br>
-              <h6 class="mod mt-3">A partir de 14 anos</h6>
-              <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516897/Site%20brasas.com/4_rsdkid-removebg-preview_inylag.png" alt="Descrição da imagem" class="imagem-card">
-            </center>
-          </div>
-
-          <div class="card-category1" color="white">
-            <center>
-              BRASAS Online <br>
-              <h6 class="mod mt-3">Aprenda com aulas online e ao vivo</h6>
-              <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516987/Site%20brasas.com/5_qd6zbf-removebg-preview_bl5s9t.png" alt="Descrição da imagem" class="imagem-card3">
-            </center>
-          </div>
-
-          <div class="card-category1" color="white">
-            <center>
-              Certificação Internacional <br>
-              <h6 class="mod mt-3">Cursos preparatórios e prova</h6>
-              <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705517093/Site%20brasas.com/6_n3h31m-removebg-preview_wd8t9m.png" alt="Descrição da imagem" class="imagem-card">
-            </center>
-          </div>
-
-          <div class="card-category1" color="white">
-            <center>
-              Parcerias <br>
-              <h6 class="mod mt-3">Escolas, Universidades e Empresas</h6>
-              <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705517187/Site%20brasas.com/7_blgxte-removebg-preview_cbgbsj.png" alt="Descrição da imagem" class="imagem-card">
-            </center>
-          </div>
-        </div>
-      </div>
-
-      <center><h2 class="indica"><strong>Quem faz o BRASAS, indica!</strong></h2></center>
-
-      <section class="testimonial text-center">
-        <div class="container">
-
-            <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
-
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <div class="testimonial4_slide">
-                            <img src="" class="img-circle img-responsive" />
-                            <p>Tenho aproveitado muito o curso na modalidade on-line. É mais prático, mais focado e até mesmo mais confortável. Além disso, estudar a distância é o que me permite aproveitar todos os benefícios do método BRASAS, mesmo eu morando fora do Brasil.</p>
-                            <h4>Fabiana Arruda</h4>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="testimonial4_slide">
-                            <img src="" class="img-circle img-responsive" />
-                            <p>Com as aulas online, não sentimos diferença no aprendizado e na pronúncia, pelo contrário, ficaram até mais puxadas. Estamos muito familiarizados com a escola, o site, a secretaria e todo material didático, sem falar na teacher Ge, que é ótima.</p>
-                            <h4>Giovana Sé de Fazio</h4>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="testimonial4_slide">
-                            <img src="" class="img-circle img-responsive" />
-                            <p>O BRASAS tem um ótimo interesse pelo aluno, com excelentes professores e uma tecnologia completa de áudio, secretaria virtual, Google Classroom, gramática digital e online books.</p>
-                            <h4>Luiz Fernando de Fazio</h4>
-                        </div>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="testimonial4_slide">
+                        <img src="" class="img-circle img-responsive" />
+                        <p>Tenho aproveitado muito o curso na modalidade on-line. É mais prático, mais focado e até mesmo mais confortável. Além disso, estudar a distância é o que me permite aproveitar todos os benefícios do método BRASAS, mesmo eu morando fora do Brasil.</p>
+                        <h4>Fabiana Arruda</h4>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#testimonial4" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
+                <div class="carousel-item">
+                    <div class="testimonial4_slide">
+                        <img src="" class="img-circle img-responsive" />
+                        <p>Com as aulas online, não sentimos diferença no aprendizado e na pronúncia, pelo contrário, ficaram até mais puxadas. Estamos muito familiarizados com a escola, o site, a secretaria e todo material didático, sem falar na teacher Ge, que é ótima.</p>
+                        <h4>Giovana Sé de Fazio</h4>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial4_slide">
+                        <img src="" class="img-circle img-responsive" />
+                        <p>O BRASAS tem um ótimo interesse pelo aluno, com excelentes professores e uma tecnologia completa de áudio, secretaria virtual, Google Classroom, gramática digital e online books.</p>
+                        <h4>Luiz Fernando de Fazio</h4>
+                    </div>
+                </div>
             </div>
+            <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#testimonial4" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
-      <div class="col-12 tipodecursos mb-5">
-        <div class="cards">
-          <div class="card-category2" color="white">
-            <center>Quem somos <br>
-            <h6 class="mod mt-3 mb-5">Um curso com mais de 50 anos de tradição <br>
-            e experiência do ensino da língua inglesa. <br>
-            Conheça a nossa história e propósito.</h6></center>
-            <center><a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel6">Saiba mais<i class="fa-sharp fa-solid fa-arrow-right"></i></a></center>
-          </div>
-
-          <div class="card-category3" color="white">
-            <center>Método BRASAS <br>
-            <h6 class="mod mt-3 mb-5">O BRASAS tem um método de ensino <br>
-            exclusivo e material didático próprio, <br>
-            desenvolvido para cada faixa etária.</h6></center>
-            <center><a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel8">Saiba mais<i class="fa-sharp fa-solid fa-arrow-right"></i></a></center>
-          </div>
-
-          <div class="card-category4" color="white">
-            <center>Unidades <br>
-            <h6 class="mod mt-3 mb-5">Mais de 20 unidades no Rio de Janeiro, <br>
-            além de outras espalhadas pelo Brasil. <br>
-            Encontre sua unidade e entre em contato.</h6></center>
-            <center><a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel9">Saiba mais<i class="fa-sharp fa-solid fa-arrow-right"></i></a></center>
-          </div>
-       </div>
+  <div class="col-12 tipodecursos mb-5">
+    <div class="cards">
+      <div class="card-category2" color="white">
+        <center>Quem somos <br>
+        <h6 class="mod mt-3 mb-5">Um curso com mais de 50 anos de tradição <br>
+        e experiência do ensino da língua inglesa. <br>
+        Conheça a nossa história e propósito.</h6></center>
+        <center><a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel6">Saiba mais<i class="fa-sharp fa-solid fa-arrow-right"></i></a></center>
       </div>
 
-      <div class="row no-gutter nivelamento">
-        <div class="col-md-6 nivel3 bg-image2">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12 col-xl-8 mx-auto ft">
-                <h3 class="nivel4">Faça parte da história <br>
-                  do BRASAS!</h3> <br>
-                <h6 class="nivel2"> Junte-se a uma empresa que tem mais <br>
-                  de 55 anos de experiência no mercado <br>
-                  de ensino da língua inglesa.
-                </h6>
-                  <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel5">Seja um franqueado!<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 d-none d-md-flex bg-image"></div>
+      <div class="card-category3" color="white">
+        <center>Método BRASAS <br>
+        <h6 class="mod mt-3 mb-5">O BRASAS tem um método de ensino <br>
+        exclusivo e material didático próprio, <br>
+        desenvolvido para cada faixa etária.</h6></center>
+        <center><a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel8">Saiba mais<i class="fa-sharp fa-solid fa-arrow-right"></i></a></center>
       </div>
 
-    <%= render "shared/footer" %>
+      <div class="card-category4" color="white">
+        <center>Unidades <br>
+        <h6 class="mod mt-3 mb-5">Mais de 20 unidades no Rio de Janeiro, <br>
+        além de outras espalhadas pelo Brasil. <br>
+        Encontre sua unidade e entre em contato.</h6></center>
+        <center><a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel9">Saiba mais<i class="fa-sharp fa-solid fa-arrow-right"></i></a></center>
+      </div>
+    </div>
+  </div>
+
+  <div class="row no-gutter nivelamento">
+    <div class="col-md-6 nivel3 bg-image2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-xl-8 mx-auto ft">
+            <h3 class="nivel4">Faça parte da história <br>
+              do BRASAS!</h3> <br>
+            <h6 class="nivel2"> Junte-se a uma empresa que tem mais <br>
+              de 55 anos de experiência no mercado <br>
+              de ensino da língua inglesa.
+            </h6>
+              <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel5">Seja um franqueado!<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 d-none d-md-flex bg-image"></div>
+  </div>
+
+  <%= render "shared/footer" %>
 
 <style>
   .mod {
@@ -274,345 +253,361 @@
     margin-top: 100px;
   }
 
-
-.tipodecursos {
-  display: flex;
-  justify-content: center;
-}
-
-.bg-image {
-  background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322111/Site%20brasas.com/8_ccvr0x.png');
-  background-size: cover;
-  background-position: center;
-}
-
-#bg-image1 {
-  background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705518494/Site%20brasas.com/34_p9tksb.png');
-  background-size: cover;
-  background-position: center;
-}
-
-.bg-image2 {
-  background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705424714/Site%20brasas.com/23_oajwyw.png');
-  background-color: #ffffff;
-  background-size: cover;
-  background-position: center;
-}
-
-.card {
-  display: flex;
-  justify-content: center;
-  color: #001e60;
-  font-size: 24px;
-  font-weight: bold;
-  background: #FFFFFF;
-  border: 1px solid #B3B3B3;
-  padding: 20px;
-  border-radius: 18px;
-}
-
-.card-category1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #001E60;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 32px;
-  width: 324px;
-  height: 264px;
-  background: #FFFFFF;
-  border: 1px solid #B3B3B3;
-  padding: 20px;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.card-category2 {
-  margin-right: 100px;
-  margin-bottom: 20px;
-  justify-content: center;
-  color: #001E60;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 48px;
-  height: 599px;
-  width: 394.67px;
-  background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322114/Site%20brasas.com/20_tcsiqc.png');
-  background-size: cover;
-  padding: 20px;
-  border-radius: 18px;
-}
-
-.card-category3 {
-  justify-content: center;
-  color: #001E60;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 48px;
-  height: 599px;
-  width: 394.67px;
-  background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322114/Site%20brasas.com/21_tt3pfx.png');
-  background-size: cover;
-  padding: 20px;
-  border-radius: 18px;
-}
-
-.card-category4 {
-  justify-content: center;
-  color: #001E60;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 48px;
-  height: 599px;
-  width: 394.67px;
-  background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322114/Site%20brasas.com/22_gatj5d.png');
-  background-size: cover;
-  padding: 20px;
-  border-radius: 18px;
-}
-
-.container-banner {
-  text-align: left;
-  max-width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  margin: 0 auto;
-  margin-top: -35px;
-}
-
-.banner {
-  height: 682px;
-}
-
-.nivel {
-  color: white;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-  display: flex;
-  justify-content: end;
-  margin: 0px 500px auto;
-}
-
-.nivel1 {
-  color: white;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: end;
-  margin: 0px 313px 40px auto;
-}
-
-.nivel2 {
-  color: white;
-  weight: 400;
-  font-size: 24px;
-  line-height: 32px;
-  margin-bottom: 113px;
-  margin-top: -3px;
-}
-
-.nivel4 {
-  color: white;
-  weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-  margin-top: -97px;
-}
-
-#cadastronivel {
-  border-color: #C8102E;
-  background-color: #C8102E;
-  color: white;
-  border-radius: 8px;
-  font-size: 16px !important;
-  font-weight: 600;
-  line-height: 24px;
-  padding-left: 18px;
-  padding-right: 18px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-left: 1080px;
-}
-
-#cadastronivel:hover {
-  color:#1E22BE;
-  background-color: white;
-  border-style: none;
-}
-
-.nivelamento {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-.5 * var(--bs-gutter-x));
-  margin-left: calc(-.5 * var(--bs-gutter-x));
-  height: 682px;
-}
-
-.nome {
-  margin-top: -60px;
-  margin-left: 5px;
-  width: 100%;
-}
-
-.nome2 {
-  display: flex;
-  justify-content: center;
-  margin-bottom: -48px;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 32px;
-}
-
-.alunonivel {
-  gap: 24px;
-  background: #FFFFFF;
-  border: 1px solid #BCBEC0;
-  border-radius: 16px;
-  width: 886px;
-  height: 472px;
-  position: absolute;
-  margin-top: 35px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.controls {
-  margin-top: 27px;
-}
-
-.form-label {
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 24px;
-}
-
-.concordo {
-  margin-bottom: 10px;
-  margin-top: 7px;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 24px;
-}
-
-.checkbox-inline {
-  margin-right: 30px;
-}
-
-.formas1{
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-#cadastroformas {
-  width: 95px;
-  height: 48px;
-  border-radius: 8px;
-  padding: 12px 24px 12px 24px;
-  gap: 8px;
-  background-color: #1E22BE;
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  display: flex;
-  justify-content: center;
-  margin-top: -20px;
-}
-
-.conheca {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-  margin-top: 430px;
-}
-
-.indica {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-  margin-top: 200px;
-}
-
-.imagem-card {
-  width: 324px;
-  height: auto;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-}
-
-.imagem-card1 {
-  width: 324px;
-  height: auto;
-  position: relative;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  margin-top: -40px;
-}
-
-.imagem-card2 {
-  width: 324px;
-  height: auto;
-  position: relative;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  margin-top: -10px;
-}
-
-.imagem-card3 {
-  width: 324px;
-  height: auto;
-  position: relative;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  margin-top: -32px;
-}
-
-.cards1 {
-  display: flex;
-  justify-content: center;
-  max-width: 1400px;
-  flex-wrap: wrap;
-  margin-top: 60px;
-}
-
-/* Small devices (landscape phones, 576px and up) */
-  @media (min-width: 576px) {
-    .cards1 {
-      grid-template-columns: 1fr;
-    }
+  .tipodecursos {
+    display: flex;
+    justify-content: center;
   }
 
-  /* Medium devices (tablets, 768px and up) */
-  @media (min-width: 768px) {
-    .cards1 {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .bg-image {
+    background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322111/Site%20brasas.com/8_ccvr0x.png');
+    background-size: cover;
+    background-position: center;
   }
 
-  /* Large devices (desktops, 992px and up) */
-  @media (min-width: 992px) {
-    .cards1 {
-      grid-template-columns: repeat(3, 1fr);
-    }
+  #bg-image1 {
+    background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705518494/Site%20brasas.com/34_p9tksb.png');
+    background-size: cover;
+    background-position: center;
   }
 
-  /* Extra large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) {
-    .cards1 {
-      grid-template-columns: repeat(4, 1fr);
-    }
+  .bg-image2 {
+    background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705424714/Site%20brasas.com/23_oajwyw.png');
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center;
   }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    color: #001e60;
+    font-size: 24px;
+    font-weight: bold;
+    background: #FFFFFF;
+    border: 1px solid #B3B3B3;
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .card-category1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #001E60;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+    width: 324px;
+    height: 264px;
+    background: #FFFFFF;
+    border: 1px solid #B3B3B3;
+    padding: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .card-category2 {
+    margin-right: 100px;
+    margin-bottom: 20px;
+    justify-content: center;
+    color: #001E60;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    height: 599px;
+    width: 394.67px;
+    background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322114/Site%20brasas.com/20_tcsiqc.png');
+    background-size: cover;
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .card-category3 {
+    margin-right: 100px;
+    justify-content: center;
+    color: #001E60;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    height: 599px;
+    width: 394.67px;
+    background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322114/Site%20brasas.com/21_tt3pfx.png');
+    background-size: cover;
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .card-category4 {
+    justify-content: center;
+    color: #001E60;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    height: 599px;
+    width: 394.67px;
+    background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322114/Site%20brasas.com/22_gatj5d.png');
+    background-size: cover;
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  #cadastronivel {
+    border-color: #C8102E;
+    background-color: #C8102E;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 18px 15px;
+    margin: 0 auto;
+    display: block;
+    width: 14%;
+    margin-left: 1080px;
+  }
+
+  .container-banner {
+    text-align: left;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: -35px;
+  }
+
+  .banner {
+    height: 682px;
+  }
+
+  .nivel {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: end;
+    margin: 0px 500px auto;
+  }
+
+  .nivel1 {
+    color: white;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 15px;
+    margin: 0px 313px 26px auto;
+    display: flex;
+    justify-content: end;
+  }
+
+  .nivel2 {
+    color: white;
+    weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 113px;
+    margin-top: -3px;
+  }
+
+  .nivel4 {
+    color: white;
+    weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    margin-top: -97px;
+  }
+
+  #cadastronivel:hover {
+    color:#1E22BE;
+    background-color: white;
+    border-style: none;
+  }
+
+  .nivelamento {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    height: 682px;
+  }
+
+  .nome {
+    margin-top: -60px;
+    margin-left: 5px;
+    width: 100%;
+  }
+
+  .nome2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -48px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  .alunonivel {
+    gap: 24px;
+    background: #FFFFFF;
+    border: 1px solid #BCBEC0;
+    border-radius: 16px;
+    width: 886px;
+    height: 472px;
+    position: absolute;
+    margin-top: 35px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .controls {
+    margin-top: 27px;
+  }
+
+  .form-label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .concordo {
+    margin-bottom: 10px;
+    margin-top: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .checkbox-inline {
+    margin-right: 30px;
+  }
+
+  .formas1{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  #cadastroformas {
+    width: 95px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 12px 24px 12px 24px;
+    gap: 8px;
+    background-color: #1E22BE;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+  }
+
+  .conheca {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    margin-top: 430px;
+  }
+
+  .indica {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    margin-top: 200px;
+  }
+
+  .imagem-card {
+    width: 324px;
+    height: auto;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  .imagem-card1 {
+    width: 324px;
+    height: auto;
+    position: relative;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    margin-top: -40px;
+  }
+
+  .imagem-card2 {
+    width: 324px;
+    height: auto;
+    position: relative;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    margin-top: -10px;
+  }
+
+  .imagem-card3 {
+    width: 324px;
+    height: auto;
+    position: relative;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    margin-top: -32px;
+  }
+
+  .cards1 {
+    display: flex;
+    justify-content: center;
+    max-width: 1400px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+
+  .col-12.tipodecursos .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      .cards1 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+      .cards1 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+      .cards1 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+      .cards1 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* Add a media query for smaller screens */
+    @media (max-width: 767px) {
+      .card-category2,
+      .card-category3,
+      .card-category4 {
+        margin: 0 auto 20px; /* Center the cards horizontally on smaller screens */
+      }
+    }
 </style>
