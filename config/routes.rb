@@ -20,11 +20,19 @@ Rails.application.routes.draw do
   get '/nivelamento', to: 'mains#nivelamento', as: 'nivelamento'
   post '/nivelamento', to: 'mains#nivelamento', as: 'nivelamento_post'
 
-  get 'contato', to: 'mains#contato', as: 'contato'
-  post '/contato', to: 'mains#contato', as: 'contato_post'
+  get '/o_brasas', to: 'mains#o_brasas', as: 'o_brasas_post'
+  get '/metodo', to: 'mains#metodo', as: 'metodo'
+  get '/unidades', to: 'mains#unidades', as: 'unidades'
+  get '/indique_e_ganhe', to: 'mains#indique_e_ganhe', as: 'indique_e_ganhe'
+  get '/feed', to: 'mains#feed', as: 'feed'
 
   get '/fale_conosco', to: 'mains#fale_conosco', as: 'fale_conosco'
   post '/fale_conosco', to: 'mains#fale_conosco_post', as: 'fale_conosco_post'
+
+  get '/trabalhe', to: 'mains#trabalhe', as: 'trabalhe'
+  post '/trabalhe', to: 'mains#trabalhe', as: 'trabalhe_post'
+
+  get '/franqueado', to: 'mains#franqueado', as: 'franqueado'
 
   get '/concluido', to: 'mains#concluido', as: 'concluido'
   get '/cursos', to: 'mains#cursos', as: 'cursos'
