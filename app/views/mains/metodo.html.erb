@@ -1,19 +1,21 @@
 <%= render "shared/navbar" %>
 
-<div class="banner_metodo" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: url(https://res.cloudinary.com/dgrsenrsa/image/upload/v1705324013/Site%20brasas.com/28_ovhlji.png);" id="bg-image1">
   <div class="container">
     <center>
-      <h1><strong>MÉTODO</strong></h1>
-    </center>
-    <center>
-      <p>BRASAS</p>
+      <div class="metodo">MÉTODO</div> <br>
+      <div class="metodos">BRASAS</div>
+      </h1>
     </center>
   </div>
 </div>
 
 <div class="container mt-5 metodo1">
   <center>
-    <h6>Método original e exclusivo que utiliza o mesmo processo do <br> aprendizado da língua materna: antes de ler ou escrever, o aluno fala.</h6>
+    <div class="metodos1">
+      Método original e exclusivo que utiliza o mesmo processo do <br>
+      aprendizado da língua materna: antes de ler ou escrever, o aluno fala.
+    </div>
   </center>
 </div>
 
@@ -21,8 +23,12 @@
 
 <div class="container mt-5 metodo2">
   <center>
-    <h6>O aluno se comunica somente em inglês nas aulas, pois assim <br> adquire o domínio das quatro habilidades linguísticas:</h6>
+    <div class="metodos2">
+      O aluno se comunica somente em inglês nas aulas, pois assim <br>
+      adquire o domínio das quatro habilidades linguísticas:
+    </div>
   </center>
+
   <div class="circle-container">
     <div class="circle">
       <span class="circle-text">Compreensão oral</span>
@@ -44,13 +50,62 @@
   </div>
 </div>
 
+<div class="texto">
+  <center>
+    A grande diferença do BRASAS é que o aluno aprende as <br>
+    estruturas na prática e não estudando somente regras <br>
+    gramaticais, o que agiliza muito a evolução no idioma.
+  </center>
+</div>
+
+<div class="redonda">
+  <%= image_tag "metodo.png", style: "width:500px;" %>
+</div>
+
 <style>
+.texto {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #2C2C2C;
+  margin-top: 165px;
+}
+
 .container {
   max-width: 1184px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
+}
+
+.metodo {
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 72px;
+  color: white;
+}
+
+.metodos {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 72px;
+  color: white;
+}
+
+.metodos1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: black;
+}
+
+.metodos2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1E22BE;
+  padding-top: 30px;
 }
 
 .metodo2 {
@@ -62,7 +117,6 @@
 
 .metodo2 h6 {
   padding-top: 40px;
-  font-family: Museo Sans Rounded;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -94,7 +148,6 @@
 }
 
 .circle-text {
-  font-family: Museo Sans;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
