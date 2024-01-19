@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get '/nivelamento', to: 'mains#nivelamento', as: 'nivelamento'
   post '/nivelamento', to: 'mains#nivelamento', as: 'nivelamento_post'
 
-  get '/o_brasas', to: 'mains#o_brasas', as: 'o_brasas_post'
+  get '/o_brasas', to: 'mains#o_brasas', as: 'o_brasas'
   get '/metodo', to: 'mains#metodo', as: 'metodo'
   get '/unidades', to: 'mains#unidades', as: 'unidades'
   get '/indique_e_ganhe', to: 'mains#indique_e_ganhe', as: 'indique_e_ganhe'
