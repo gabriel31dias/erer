@@ -84,7 +84,7 @@
 
         <div class="botao-encontre">
           <%= simple_form_for :student, url: contato_path, data: { turbo: false } do |f| %>
-            <%= f.button :submit, "Encontre sua unidade", class: "btn btn-primary", id: "botao-unidade" %>
+            <%= link_to "Encontre sua unidade", unidades_lista_path, class: "btn btn-primary", id: "botao-unidade" %>
           <% end %>
         </div>
 
@@ -173,6 +173,27 @@
 
 <%# CSS %>
 <style>
+  #cadastronivel7 {
+  border-color: #1E22BE;
+  background-color: #1E22BE;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px !important;
+  font-weight: bolder !important;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+  #cadastronivel7:hover {
+    color:#1E22BE;
+    background-color: white;
+  }
+
   /* Banner */
 .banner-adults {
   width: 100%;

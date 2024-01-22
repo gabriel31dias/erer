@@ -220,26 +220,47 @@
     <div class="cards">
       <div class="card-category2" color="white">
         <center>Quem somos <br>
-        <h6 class="mod mt-3 mb-5">Um curso com mais de 50 anos de tradição <br>
-        e experiência do ensino da língua inglesa. <br>
-        Conheça a nossa história e propósito.</h6></center>
-        <center><a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel6">Saiba mais<i class="fa-sharp fa-solid fa-arrow-right"></i></a></center>
+          <h6 class="mod mt-3 mb-5">
+            Um curso com mais de 50 anos de tradição <br>
+            e experiência do ensino da língua inglesa. <br>
+            Conheça a nossa história e propósito.
+          </h6>
+        </center>
+        <center>
+          <%= link_to metodo_path, id: "cadastronivel6" do %>
+              Saiba mais <i class="fa-sharp fa-solid fa-arrow-right"></i>
+          <% end %>
+        </center>
       </div>
 
       <div class="card-category3" color="white">
         <center>Método BRASAS <br>
-        <h6 class="mod mt-3 mb-5">O BRASAS tem um método de ensino <br>
-        exclusivo e material didático próprio, <br>
-        desenvolvido para cada faixa etária.</h6></center>
-        <center><a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel8">Saiba mais<i class="fa-sharp fa-solid fa-arrow-right"></i></a></center>
+          <h6 class="mod mt-3 mb-5">
+            O BRASAS tem um método de ensino <br>
+            exclusivo e material didático próprio, <br>
+            desenvolvido para cada faixa etária.
+          </h6>
+        </center>
+        <center>
+          <%= link_to metodo_path, id: "cadastronivel8" do %>
+              Saiba mais <i class="fa-sharp fa-solid fa-arrow-right"></i>
+          <% end %>
+        </center>
       </div>
 
       <div class="card-category4" color="white">
         <center>Unidades <br>
-        <h6 class="mod mt-3 mb-5">Mais de 20 unidades no Rio de Janeiro, <br>
-        além de outras espalhadas pelo Brasil. <br>
-        Encontre sua unidade e entre em contato.</h6></center>
-        <center><a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel9">Saiba mais<i class="fa-sharp fa-solid fa-arrow-right"></i></a></center>
+          <h6 class="mod mt-3 mb-5">
+            Mais de 20 unidades no Rio de Janeiro, <br>
+            além de outras espalhadas pelo Brasil. <br>
+            Encontre sua unidade e entre em contato.
+          </h6>
+        </center>
+        <center>
+          <%= link_to unidades_lista_path, id: "cadastronivel9" do %>
+              Saiba mais <i class="fa-sharp fa-solid fa-arrow-right"></i>
+          <% end %>
+        </center>
       </div>
     </div>
   </div>
@@ -269,6 +290,81 @@
   <%= render "shared/footer" %>
 
 <style>
+  #cadastronivel5 {
+  border-color: #1E22BE;
+  background-color: #1E22BE;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px !important;
+  font-weight: bolder !important;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#cadastronivel5:hover {
+  color:#1E22BE;
+  background-color: white;
+}
+
+#cadastronivel6 {
+  border-color: #001E60;
+  background-color: #001E60;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px !important;
+  font-weight: bolder !important;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#cadastronivel6:hover {
+  color:#1E22BE;
+  background-color: white;
+}
+
+#cadastronivel8 {
+  border-color: #F18952;
+  background-color: #F18952;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px !important;
+  font-weight: bolder !important;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#cadastronivel8:hover {
+  color:#1E22BE;
+  background-color: white;
+}
+  #cadastronivel9 {
+    border-color: #1E22BE;
+    background-color: #1E22BE;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px !important;
+    font-weight: bolder !important;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  #cadastronivel9:hover {
+    color:#1E22BE;
+    background-color: white;
+  }
+
   h2 {
     font-weight: 400;
     font-size: 20px;
