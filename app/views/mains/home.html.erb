@@ -154,49 +154,7 @@
 
   <center><h2 class="indica"><strong>Quem faz o BRASAS, indica!</strong></h2></center>
 
-  <style>
-    h2{
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 32px;
-      width: 620px;
-      color: #2C2C2C;
-    }
-
-    .carousel-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .carousel-item {
-      position: relative;
-      width: 596.47px;
-      height: 376.24px;
-    }
-
-    .carousel-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white; /* Cor do texto */
-      text-align: center;
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-      cursor: pointer;
-      background-color: #1E22BE;
-      border-radius: 50%;
-      width: 56px;
-      height: 56px;
-      top: 160px;
-    }
-  </style>
-
-
+<%# CAROUSEL %>
   <div class="carousel-container">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -253,7 +211,7 @@
       </button>
     </div>
   </div>
-
+<%# FIM DO CAROUSEL %>
 
   <div class="col-12 tipodecursos mb-5">
     <div class="cards">
@@ -305,6 +263,46 @@
   <%= render "shared/footer" %>
 
 <style>
+  h2 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    width: 620px;
+    color: #2C2C2C;
+  }
+
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .carousel-item {
+    position: relative;
+    width: 596.47px;
+    height: 376.24px;
+  }
+
+  .carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    cursor: pointer;
+    background-color: #1E22BE;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    top: 160px;
+  }
+
   .mod {
     font-size: 16px;
     font-weight: 400;
