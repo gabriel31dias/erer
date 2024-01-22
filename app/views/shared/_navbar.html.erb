@@ -20,35 +20,35 @@
               CURSOS
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="http://localhost:3000/prek">Pre-k</a></li>
-              <li><a class="dropdown-item" href="http://localhost:3000/kids">Kids</a></li>
-              <li><a class="dropdown-item" href="#">Juniors & Teens</a></li>
-              <li><a class="dropdown-item" href="#">Adults</a></li>
-              <li><a class="dropdown-item" href="#">Certificações Internacionais</a></li>
-              <li><a class="dropdown-item" href="#">BRASAS On Demand</a></li>
-              <li><a class="dropdown-item" href="#">BRASAS Online English</a></li>
-              <li><a class="dropdown-item" href="#">Imersão</a></li>
-              <li><a class="dropdown-item" href="#">Conversation</a></li>
-              <li><a class="dropdown-item" href="#">Portuguese for Foreigners</a></li>
-              <li><a class="dropdown-item" href="#">Seniors</a></li>
+              <li><%= link_to "Pre-K", prek_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Kids", prek_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Juniors & Teens", prek_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Adults", prek_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Certificações Internacionais", prek_path, class: "dropdown-item" %></li>
+              <li><%= link_to "BRASAS On Demand", prek_path, class: "dropdown-item" %></li>
+              <li><%= link_to "BRASAS Online English", prek_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Imersão", prek_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Conversation", prek_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Portuguese for Foreigners", prek_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Seniors", prek_path, class: "dropdown-item" %></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="http://localhost:3000/pra_mim">BRASAS pra mim</a></li>
+              <li><%= link_to "BRASAS pra mim", prek_path, class: "dropdown-item" %></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">UNIDADES</a>
+            <%= link_to "UNIDADES", prek_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">BRASAS FEED</a>
+            <%= link_to "BRASAS FEED", prek_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">CONTATO</a>
+            <%= link_to "CONTATO", fale_conosco_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">PARCERIAS</a>
+            <%= link_to "PARCERIAS", prek_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">INDIQUE E GANHE</a>
+            <%= link_to "INDIQUE E GANHE", prek_path, class: "nav-link" %>
           </li>
       </ul>
     </div>
