@@ -92,6 +92,7 @@
 
   <center><h2 class="conheca"><strong>Conheça nossos cursos</strong></h2></center>
 
+<%# CARDS %>
   <div class="col-12 tipodecursos">
     <div class="cards1">
       <div class="card-category1" color="white">
@@ -151,52 +152,11 @@
       </div>
     </div>
   </div>
+<%# FIM DOS CARDS %>
 
   <center><h2 class="indica"><strong>Quem faz o BRASAS, indica!</strong></h2></center>
 
-  <style>
-    h2{
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 32px;
-      width: 620px;
-      color: #2C2C2C;
-    }
-
-    .carousel-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .carousel-item {
-      position: relative;
-      width: 596.47px;
-      height: 376.24px;
-    }
-
-    .carousel-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white; /* Cor do texto */
-      text-align: center;
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-      cursor: pointer;
-      background-color: #1E22BE;
-      border-radius: 50%;
-      width: 56px;
-      height: 56px;
-      top: 160px;
-    }
-  </style>
-
-
+<%# CAROUSEL %>
   <div class="carousel-container">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -253,8 +213,9 @@
       </button>
     </div>
   </div>
+<%# FIM DO CAROUSEL %>
 
-
+<%# 3 CARDS %>
   <div class="col-12 tipodecursos mb-5">
     <div class="cards">
       <div class="card-category2" color="white">
@@ -282,7 +243,9 @@
       </div>
     </div>
   </div>
+  <%# FIM DOS 3 CARDS %>
 
+  <%# TELA 2 COLUNAS COM IMAGEM %>
   <div class="row no-gutter nivelamento">
     <div class="col-md-6 nivel3 bg-image2">
       <div class="container">
@@ -301,10 +264,51 @@
     </div>
     <div class="col-md-6 d-none d-md-flex bg-image"></div>
   </div>
+  <%# FIM DA TELA 2 COLUNAS COM IMAGEM %>
 
   <%= render "shared/footer" %>
 
 <style>
+  h2 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    width: 620px;
+    color: #2C2C2C;
+  }
+
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 67vh;
+  }
+
+  .carousel-item {
+    position: relative;
+    width: 596.47px;
+    height: 376.24px;
+  }
+
+  .carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    cursor: pointer;
+    background-color: #1E22BE;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    top: 160px;
+  }
+
   .mod {
     font-size: 16px;
     font-weight: 400;
