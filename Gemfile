@@ -75,3 +75,7 @@ group :test do
 end
 
 gem "cloudinary"
+
+gem 'activeadmin'
+gem 'open_street_map'
+gem 'leaflet-rails'

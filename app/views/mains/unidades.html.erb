@@ -1,0 +1,35 @@
+<h1>OpenStreetMap Example</h1>
+
+<div id="map" style="height: 500px;"></div>
+
+<script>
+  var map = L.map('map').setView([51.505, -0.09], 13);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  // Add markers, popups, or other interactivity here
+</script>
+
+<% if @results %>
+  <ul>
+    <% @results.each do |result| %>
+      <li><%= result['display_name'] %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<% if @results %>
+  <script>
+    var markers = [];
+
+    <% @results.each do |result| %>
+      var marker = L.marker([<%= result['lat'] %>, <%= result['lon'] %>]).addTo(map);
+      markers.push(marker);
+    <% end %>
+
+    // Add interactivity to the markers here, such as popups or tooltips
+  </script>
+<% end %>
