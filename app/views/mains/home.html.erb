@@ -154,19 +154,106 @@
 
   <center><h2 class="indica"><strong>Quem faz o BRASAS, indica!</strong></h2></center>
 
+  <style>
+    h2{
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 32px;
+      width: 620px;
+      color: #2C2C2C;
+    }
+
+    .carousel-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .carousel-item {
+      position: relative;
+      width: 596.47px;
+      height: 376.24px;
+    }
+
+    .carousel-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white; /* Cor do texto */
+      text-align: center;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      cursor: pointer;
+      background-color: #1E22BE;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      top: 160px;
+    }
+  </style>
+
+
   <div class="carousel-container">
-    <div class="carousel-slide" style="background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705686945/Site%20brasas.com/36_sqpyrq.png');">
-      <div class="carousel-content">
-        <h1>Texto do Slide 1</h1>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705686945/Site%20brasas.com/36_sqpyrq.png" class="d-block w-100" alt="...">
+          <div class="carousel-text">
+            <h2>“Lorem ipsum dolor sit amet, consectetur <br>
+              adipiscing elit. Vivamus quam leo, luctus vitae <br>
+              rhoncus id, condimentum ac enim. Nam <br>
+              lobortis id enim eget elementum. Etiam <br>
+              pharetra imperdiet enim, eget iaculis nisl <br>
+              viverra nec. Class aptent taciti sociosqu ad <br>
+              litora torquent per conubia nostra, per <br>
+              inceptos himenaeos.”
+            </h2>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705686945/Site%20brasas.com/36_sqpyrq.png" class="d-block w-100" alt="...">
+          <div class="carousel-text">
+            <h2>“Lorem ipsum dolor sit amet, consectetur <br>
+              adipiscing elit. Vivamus quam leo, luctus vitae <br>
+              rhoncus id, condimentum ac enim. Nam <br>
+              lobortis id enim eget elementum. Etiam <br>
+              pharetra imperdiet enim, eget iaculis nisl <br>
+              viverra nec. Class aptent taciti sociosqu ad <br>
+              litora torquent per conubia nostra, per <br>
+              inceptos himenaeos.”
+            </h2>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705686945/Site%20brasas.com/36_sqpyrq.png" class="d-block w-100" alt="...">
+          <div class="carousel-text">
+            <h2>“Lorem ipsum dolor sit amet, consectetur <br>
+              adipiscing elit. Vivamus quam leo, luctus vitae <br>
+              rhoncus id, condimentum ac enim. Nam <br>
+              lobortis id enim eget elementum. Etiam <br>
+              pharetra imperdiet enim, eget iaculis nisl <br>
+              viverra nec. Class aptent taciti sociosqu ad <br>
+              litora torquent per conubia nostra, per <br>
+              inceptos himenaeos.”
+            </h2>
+          </div>
+        </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="carousel-slide" style="background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705686945/Site%20brasas.com/36_sqpyrq.png');">
-      <div class="carousel-content">
-        <h1>Texto do Slide 2</h1>
-      </div>
-    </div>
-    <!-- Adicione mais slides conforme necessário -->
   </div>
+
 
   <div class="col-12 tipodecursos mb-5">
     <div class="cards">
@@ -216,71 +303,6 @@
   </div>
 
   <%= render "shared/footer" %>
-
-<style>
-  h1 {
-    color: black
-  }
-  .carousel-container {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .carousel-slide {
-    min-width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-  }
-
-  .carousel-content {
-    text-align: center;
-  }
-
-  button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px;
-    font-size: 16px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-
-  #prevBtn {
-    left: 10px;
-  }
-
-  #nextBtn {
-    right: 10px;
-  }
-</style>
-
-<script>
-  let currentSlide = 0;
-
-  function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel-slide');
-    currentSlide = (index + slides.length) % slides.length;
-
-    slides.forEach((slide, i) => {
-      slide.style.transform = `translateX(${100 * (i - currentSlide)}%)`;
-    });
-  }
-
-  function changeSlide(direction) {
-    showSlide(currentSlide + direction);
-  }
-
-  document.addEventListener('DOMContentLoaded', showSlide(0));
-</script>
 
 <style>
   .mod {
