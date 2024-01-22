@@ -1,0 +1,343 @@
+<%= render "shared/navbar" %>
+
+  <div class="banner" style="background-image: url(https://res.cloudinary.com/dgrsenrsa/image/upload/v1705324013/Site%20brasas.com/29_oab0ir.png);" id="bg-image1">
+    <div class="container">
+      <center>
+        <div class="metodo">
+          Unidades <br>
+        </div>
+        <br>
+        <div class="metodos">
+          São mais de 40 unidades espalhadas pelo Brasil - todas com a mesma <br>
+          qualidade e metodologia. Encontre a unidade mais próxima <br>
+          e entre em contato.
+        </div>
+      </center>
+    </div>
+  </div>
+
+  <div class="container-search">
+  <div class="sidebar">
+    <label>ESTADO</label>
+    <div id="estados">
+      <button onclick="selecionarEstado('df')" class="estados">Distrito Federal</button>
+      <button onclick="selecionarEstado('es')" class="estados">Espírito Santo</button>
+      <button onclick="selecionarEstado('go')" class="estados">Goiás</button>
+      <button onclick="selecionarEstado('mg')" class="estados">Minas Gerais</button>
+      <button onclick="selecionarEstado('rj')" class="estados">Rio de Janeiro</button>
+      <button onclick="selecionarEstado('rs')" class="estados">Rio Grande do Sul</button>
+      <!-- Adicione outros botões de Estado conforme necessário -->
+    </div>
+
+    <label for="selectCidade">CIDADE</label>
+    <select id="selectCidade">
+      <option value="">Selecione um estado</option>
+      <option value="goiás">Goiás</option>
+      <option value="rio de janeiro">Rio de Janeiro</option>
+      <!-- Adicione outras opções de cidade conforme necessário -->
+    </select>
+
+    <label for="selectUnidade">UNIDADE</label>
+    <select id="selectUnidade">
+      <option value="">Selecione uma unidade</option>
+      <option value="marista">Marista</option>
+      <option value="bangu">Bangu</option>
+      <!-- Adicione outras opções de unidade conforme necessário -->
+    </select>
+
+    <button onclick="buscarUnidades()" id="button">Buscar</button>
+  </div>
+
+  <div class="content">
+    <ul id="listaUnidades">
+
+      <div class="card-product">
+        <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705944402/Site%20brasas.com/Bangu_-_Polo_Col%C3%A9gio_Matriz_on6zqi.png" />
+        <div class="card-product-infos">
+          <div class="nome">Bangu - Polo Colégio Matriz</div>
+          <div class="endereco">R. Agrícola, 318<br>
+            Bangu, Rio de Janeiro
+            Como chegar?
+          </div>
+          <div class="email">bg@brasas.com</div>
+          <div class="telefone">(21) 97098-5768</div>
+        </div>
+      </div>
+
+      <div class="card-product">
+        <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705944400/Site%20brasas.com/Bangu_-_Polo_Prioridade_Hum_j0xc04.png" />
+        <div class="card-product-infos">
+          <div class="nome">Bangu - Polo Prioridade Hum</div>
+          <div class="endereco">Rua Francisco Real, 325<br>
+            Bangu, Rio de Janeiro
+            Como chegar?
+          </div>
+          <div class="email">bg@brasas.com</div>
+          <div class="telefone">(21) 97098-5768</div>
+        </div>
+      </div>
+
+      <div class="card-product">
+        <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705944402/Site%20brasas.com/Barra_-_Downtown_vbfxqm.png" />
+        <div class="card-product-infos">
+          <div class="nome">Barra - Downtown</div>
+          <div class="endereco">Shopping Downtown - Avenida das Américas, 500 Bloco 10 - Loja 104<br>
+            Barra da Tijuca, Rio de Janeiro
+            Como chegar?
+          </div>
+          <div class="email">dt@brasas.com</div>
+          <div class="telefone">(21) 99297-7284</div>
+        </div>
+      </div>
+
+      <div class="card-product">
+        <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705944393/Site%20brasas.com/Barra_-_Novo_Leblon_o2fbje.png" />
+        <div class="card-product-infos">
+          <div class="nome">Barra - Novo Leblon</div>
+          <div class="endereco">Shopping Novo Leblon - Av. das Américas, 7607 sala 330<br>
+            Barra da Tijuca, Rio de Janeiro
+            Como chegar?
+          </div>
+          <div class="email">nl@brasas.com</div>
+          <div class="telefone">(21) 99297-7284</div>
+        </div>
+      </div>
+
+      <div class="card-product">
+        <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705944393/Site%20brasas.com/Barra_-_Parque_Ol%C3%ADmpico_bzwqy2.png" />
+        <div class="card-product-infos">
+          <div class="nome">Barra - Parque Olímpico</div>
+          <div class="endereco">Estrada Cel. Pedro Correa, 1427 Condomínio Rio 2<br>
+            Barra da Tijuca, Rio de Janeiro
+            Como chegar?
+          </div>
+          <div class="email">po@brasas.com</div>
+          <div class="telefone">(21) 99499-9117</div>
+        </div>
+      </div>
+
+      <div class="card-product">
+        <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705944394/Site%20brasas.com/Botafogo_n2ess6.png" />
+        <div class="card-product-infos">
+          <div class="nome">Botafogo</div>
+          <div class="endereco">Rua Voluntários da Pátria, 190, 3º andar<br>
+            Botafogo, Rio de Janeiro
+            Como chegar?
+          </div>
+          <div class="email">bf@brasas.com</div>
+          <div class="telefone">(21) 99271-7526</div>
+        </div>
+      </div>
+
+      <div class="card-product">
+        <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705944396/Site%20brasas.com/Botafogo_-_Polo_Col%C3%A9gio_Ao_Cubo1_ibyfnw.png" />
+        <div class="card-product-infos">
+          <div class="nome">Botafogo - Polo Colégio Ao Cubo</div>
+          <div class="endereco">R. Bambina, 126 <br>
+            Botafogo, Rio de Janeiro
+            Como chegar?
+          </div>
+          <div class="email">bf@brasas.com</div>
+          <div class="telefone">(21) 99271-6526</div>
+        </div>
+      </div>
+
+      <div class="card-product">
+        <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705944404/Site%20brasas.com/Botafogo_-_Polo_Col%C3%A9gio_Ao_Cubo2_gev62n.png" />
+        <div class="card-product-infos">
+          <div class="nome">Botafogo - Polo Colégio Ao Cubo</div>
+          <div class="endereco">R. Bambina, 126 <br>
+            Botafogo, Rio de Janeiro
+            Como chegar?
+          </div>
+          <div class="email">bf@brasas.com</div>
+          <div class="telefone">(21) 99271-6526</div>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>
+
+
+
+<style>
+  .nome {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    gap: 10px;
+  }
+
+  .endereco {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    gap: 8px;
+  }
+
+  .chegar {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+
+  .email {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .card-product {
+    overflow: hidden;
+    height: 244px;
+    width: 980px;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    gap: 16px;
+    border: 1px solid #001E60;
+    border-radius: 16px;
+    margin-bottom: 40px;
+  }
+
+  .card-product img {
+    height: 244px;
+    width: 312px;
+    object-fit: cover;
+    border-radius: 16px 0px 0px 16px;
+    margin-left: -25px;
+  }
+
+  .card-product h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .card-product p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+
+  .card-product .card-product-infos {
+    padding: 16px;
+  }
+
+  .estados {
+    border: 1px solid #929292;
+    border-radius: 8px;
+    padding: 8px;
+    width: 156px;
+    height: 40px;
+    background-color: transparent;
+    color: #929292;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-top: 8px;
+  }
+
+  .estados:hover {
+    color: white;
+    background-color: #1E22BE;
+  }
+
+  #selectCidade,
+  #selectUnidade {
+    border: 1px solid #929292;
+    border-radius: 8px;
+    padding: 8px;
+    width: 245px;
+    height: 40px;
+    background-color: transparent;
+    color: #929292;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-top: 8px;
+  }
+
+  #button {
+    width: 296px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 12px 24px 12px 24px;
+    gap: 8px;
+    background-color: #1E22BE;
+    margin-top: 30px;
+  }
+
+  #cidade,
+  #estado,
+  #unidade {
+    width: 296px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 0px 16px 0px 16px;
+    justify: space-between;
+    border: 1px solid #929292;
+    margin-top: 8px;
+  }
+
+  .bg-quero {
+    background-color: white;
+  }
+
+  .metodo {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 72px;
+    color: white;
+  }
+
+  .metodos {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: white;
+  }
+
+  .container-search {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 100px;
+  }
+
+  .sidebar {
+    width: 344px;
+    height: 680px;
+    padding: 24px;
+    border: 1px solid #BCBEC0;
+    border-radius: 16px;
+  }
+
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+
+  input, button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>

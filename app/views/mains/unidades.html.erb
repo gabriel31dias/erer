@@ -1,35 +1,64 @@
-<h1>OpenStreetMap Example</h1>
+<!-- app/views/unidades/search.html.erb -->
+
+<%= form_tag(unidades_path, method: :get, remote: true, id: 'seu-formulario') do %>
+  <%= label_tag :q, "Busca por CEP ou endereço:" %>
+  <%= text_field_tag :q %>
+  <%= submit_tag "Buscar" %>
+<% end %>
+
+<% if request.xhr? %>
+  <%= render partial: 'map' %>
+<% end %>
+
 
 <div id="map" style="height: 500px;"></div>
 
 <script>
+  document.addEventListener('DOMContentLoaded', function() {
   var map = L.map('map').setView([51.505, -0.09], 13);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  // Add markers, popups, or other interactivity here
+  var seuFormulario = document.querySelector('#seu-formulario');
+  seuFormulario.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Fazer uma solicitação AJAX
+    fetch(seuFormulario.action + '?' + new URLSearchParams(new FormData(seuFormulario)), {
+      method: seuFormulario.method,
+      headers: {
+        'X-Requested-With': 'XMLHttpRequest'
+      }
+    })
+    .then(response => response.text())
+    .then(data => {
+      // Criar um elemento temporário para extrair o conteúdo HTML
+      var tempElement = document.createElement('div');
+      tempElement.innerHTML = data;
+
+      // Encontrar o elemento do mapa na resposta
+      var mapContent = tempElement.querySelector('#map');
+
+      // Atualizar o mapa com o conteúdo encontrado
+      if (mapContent) {
+        var mapContainer = document.getElementById('map');
+        mapContainer.innerHTML = mapContent.innerHTML;
+
+        // Se houver dados específicos do mapa na resposta, ajuste o código aqui para processá-los
+        // Por exemplo, você pode procurar elementos específicos dentro de data e atualizar o mapa conforme necessário
+        var mapData = mapContainer.querySelector('#map-data');
+        if (mapData) {
+          // Aqui você pode processar os dados específicos do mapa e atualizar o mapa
+          console.log(mapData.textContent);
+        }
+      }
+    })
+    .catch(error => {
+      console.error('Erro na solicitação AJAX:', error);
+    });
+  });
+});
+
 </script>
-
-<% if @results %>
-  <ul>
-    <% @results.each do |result| %>
-      <li><%= result['display_name'] %></li>
-    <% end %>
-  </ul>
-<% end %>
-
-
-<% if @results %>
-  <script>
-    var markers = [];
-
-    <% @results.each do |result| %>
-      var marker = L.marker([<%= result['lat'] %>, <%= result['lon'] %>]).addTo(map);
-      markers.push(marker);
-    <% end %>
-
-    // Add interactivity to the markers here, such as popups or tooltips
-  </script>
-<% end %>
