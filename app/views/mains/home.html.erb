@@ -2,6 +2,7 @@
   <%= render "shared/navbar" %>
 </div>
 
+<%# BANNER %>
   <div class="banner" style="background-image: url(https://res.cloudinary.com/dgrsenrsa/image/upload/v1705518494/Site%20brasas.com/34_p9tksb.png);" id="bg-image1">
     <div class="container-banner">
       <h3 class="nivel">
@@ -15,7 +16,9 @@
     </div>
       <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel">Fazer teste de nivelamento<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
   </div>
+<%# FIM DO BANNER %>
 
+<%# FORM %>
   <div class="container">
     <div class="alunonivel">
         <div class="row gy-5 nome">
@@ -85,6 +88,7 @@
               <% end %>
     </div>
   </div>
+<%# FIM DO FORM %>
 
   <center><h2 class="conheca"><strong>Conheça nossos cursos</strong></h2></center>
 
@@ -150,43 +154,19 @@
 
   <center><h2 class="indica"><strong>Quem faz o BRASAS, indica!</strong></h2></center>
 
-  <section class="testimonial text-center">
-    <div class="container">
-
-        <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
-
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <div class="testimonial4_slide">
-                        <img src="" class="img-circle img-responsive" />
-                        <p>Tenho aproveitado muito o curso na modalidade on-line. É mais prático, mais focado e até mesmo mais confortável. Além disso, estudar a distância é o que me permite aproveitar todos os benefícios do método BRASAS, mesmo eu morando fora do Brasil.</p>
-                        <h4>Fabiana Arruda</h4>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="testimonial4_slide">
-                        <img src="" class="img-circle img-responsive" />
-                        <p>Com as aulas online, não sentimos diferença no aprendizado e na pronúncia, pelo contrário, ficaram até mais puxadas. Estamos muito familiarizados com a escola, o site, a secretaria e todo material didático, sem falar na teacher Ge, que é ótima.</p>
-                        <h4>Giovana Sé de Fazio</h4>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="testimonial4_slide">
-                        <img src="" class="img-circle img-responsive" />
-                        <p>O BRASAS tem um ótimo interesse pelo aluno, com excelentes professores e uma tecnologia completa de áudio, secretaria virtual, Google Classroom, gramática digital e online books.</p>
-                        <h4>Luiz Fernando de Fazio</h4>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#testimonial4" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
+  <div class="carousel-container">
+    <div class="carousel-slide" style="background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705686945/Site%20brasas.com/36_sqpyrq.png');">
+      <div class="carousel-content">
+        <h1>Texto do Slide 1</h1>
+      </div>
     </div>
-</section>
+    <div class="carousel-slide" style="background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705686945/Site%20brasas.com/36_sqpyrq.png');">
+      <div class="carousel-content">
+        <h1>Texto do Slide 2</h1>
+      </div>
+    </div>
+    <!-- Adicione mais slides conforme necessário -->
+  </div>
 
   <div class="col-12 tipodecursos mb-5">
     <div class="cards">
@@ -236,6 +216,71 @@
   </div>
 
   <%= render "shared/footer" %>
+
+<style>
+  h1 {
+    color: black
+  }
+  .carousel-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+
+  .carousel-content {
+    text-align: center;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  #prevBtn {
+    left: 10px;
+  }
+
+  #nextBtn {
+    right: 10px;
+  }
+</style>
+
+<script>
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    currentSlide = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+      slide.style.transform = `translateX(${100 * (i - currentSlide)}%)`;
+    });
+  }
+
+  function changeSlide(direction) {
+    showSlide(currentSlide + direction);
+  }
+
+  document.addEventListener('DOMContentLoaded', showSlide(0));
+</script>
 
 <style>
   .mod {
