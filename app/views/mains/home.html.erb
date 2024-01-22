@@ -2,6 +2,7 @@
   <%= render "shared/navbar" %>
 </div>
 
+<%# BANNER %>
   <div class="banner" style="background-image: url(https://res.cloudinary.com/dgrsenrsa/image/upload/v1705518494/Site%20brasas.com/34_p9tksb.png);" id="bg-image1">
     <div class="container-banner">
       <h3 class="nivel">
@@ -15,7 +16,9 @@
     </div>
       <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" id="cadastronivel">Fazer teste de nivelamento<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
   </div>
+<%# FIM DO BANNER %>
 
+<%# FORM %>
   <div class="container">
     <div class="alunonivel">
         <div class="row gy-5 nome">
@@ -85,9 +88,11 @@
               <% end %>
     </div>
   </div>
+<%# FIM DO FORM %>
 
   <center><h2 class="conheca"><strong>Conheça nossos cursos</strong></h2></center>
 
+<%# CARDS %>
   <div class="col-12 tipodecursos">
     <div class="cards1">
       <div class="card-category1" color="white">
@@ -147,47 +152,70 @@
       </div>
     </div>
   </div>
+<%# FIM DOS CARDS %>
 
   <center><h2 class="indica"><strong>Quem faz o BRASAS, indica!</strong></h2></center>
 
-  <section class="testimonial text-center">
-    <div class="container">
-
-        <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
-
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <div class="testimonial4_slide">
-                        <img src="" class="img-circle img-responsive" />
-                        <p>Tenho aproveitado muito o curso na modalidade on-line. É mais prático, mais focado e até mesmo mais confortável. Além disso, estudar a distância é o que me permite aproveitar todos os benefícios do método BRASAS, mesmo eu morando fora do Brasil.</p>
-                        <h4>Fabiana Arruda</h4>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="testimonial4_slide">
-                        <img src="" class="img-circle img-responsive" />
-                        <p>Com as aulas online, não sentimos diferença no aprendizado e na pronúncia, pelo contrário, ficaram até mais puxadas. Estamos muito familiarizados com a escola, o site, a secretaria e todo material didático, sem falar na teacher Ge, que é ótima.</p>
-                        <h4>Giovana Sé de Fazio</h4>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="testimonial4_slide">
-                        <img src="" class="img-circle img-responsive" />
-                        <p>O BRASAS tem um ótimo interesse pelo aluno, com excelentes professores e uma tecnologia completa de áudio, secretaria virtual, Google Classroom, gramática digital e online books.</p>
-                        <h4>Luiz Fernando de Fazio</h4>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#testimonial4" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
+<%# CAROUSEL %>
+  <div class="carousel-container">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705686945/Site%20brasas.com/36_sqpyrq.png" class="d-block w-100" alt="...">
+          <div class="carousel-text">
+            <h2>“Lorem ipsum dolor sit amet, consectetur <br>
+              adipiscing elit. Vivamus quam leo, luctus vitae <br>
+              rhoncus id, condimentum ac enim. Nam <br>
+              lobortis id enim eget elementum. Etiam <br>
+              pharetra imperdiet enim, eget iaculis nisl <br>
+              viverra nec. Class aptent taciti sociosqu ad <br>
+              litora torquent per conubia nostra, per <br>
+              inceptos himenaeos.”
+            </h2>
+          </div>
         </div>
+        <div class="carousel-item">
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705686945/Site%20brasas.com/36_sqpyrq.png" class="d-block w-100" alt="...">
+          <div class="carousel-text">
+            <h2>“Lorem ipsum dolor sit amet, consectetur <br>
+              adipiscing elit. Vivamus quam leo, luctus vitae <br>
+              rhoncus id, condimentum ac enim. Nam <br>
+              lobortis id enim eget elementum. Etiam <br>
+              pharetra imperdiet enim, eget iaculis nisl <br>
+              viverra nec. Class aptent taciti sociosqu ad <br>
+              litora torquent per conubia nostra, per <br>
+              inceptos himenaeos.”
+            </h2>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705686945/Site%20brasas.com/36_sqpyrq.png" class="d-block w-100" alt="...">
+          <div class="carousel-text">
+            <h2>“Lorem ipsum dolor sit amet, consectetur <br>
+              adipiscing elit. Vivamus quam leo, luctus vitae <br>
+              rhoncus id, condimentum ac enim. Nam <br>
+              lobortis id enim eget elementum. Etiam <br>
+              pharetra imperdiet enim, eget iaculis nisl <br>
+              viverra nec. Class aptent taciti sociosqu ad <br>
+              litora torquent per conubia nostra, per <br>
+              inceptos himenaeos.”
+            </h2>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-</section>
+  </div>
+<%# FIM DO CAROUSEL %>
 
+<%# 3 CARDS %>
   <div class="col-12 tipodecursos mb-5">
     <div class="cards">
       <div class="card-category2" color="white">
@@ -215,7 +243,9 @@
       </div>
     </div>
   </div>
+  <%# FIM DOS 3 CARDS %>
 
+  <%# TELA 2 COLUNAS COM IMAGEM %>
   <div class="row no-gutter nivelamento">
     <div class="col-md-6 nivel3 bg-image2">
       <div class="container">
@@ -234,10 +264,52 @@
     </div>
     <div class="col-md-6 d-none d-md-flex bg-image"></div>
   </div>
+  <%# FIM DA TELA 2 COLUNAS COM IMAGEM %>
 
   <%= render "shared/footer" %>
 
 <style>
+  h2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    width: 620px;
+    color: #2C2C2C;
+    margin-top: -48px
+  }
+
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 67vh;
+  }
+
+  .carousel-item {
+    position: relative;
+    width: 596.47px;
+    height: 376.24px;
+  }
+
+  .carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    cursor: pointer;
+    background-color: #1E22BE;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    top: 160px;
+  }
+
   .mod {
     font-size: 16px;
     font-weight: 400;
