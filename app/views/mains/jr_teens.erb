@@ -1,0 +1,692 @@
+<%= render "shared/navbar" %>
+
+<div class="banner-juniors" style="background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705934368/Site%20brasas.com/39_crxgph.png');">
+ <div class="banner-text">
+   <h1>Juniors & Teens</h1>
+   <p>BRASAS, o inglês que te conecta com o mundo.</p>
+ </div>
+</div>
+
+<div class="container mt-3">
+  <h6 class="claf"><u>Cursos</u> / <strong>Juniors & Teens</strong></h6> <br>
+</div>
+
+<div class="text-container">
+  <h6><strong>Ensinamos estruturas gramaticais e vocabulário apropriado ao </strong></h6>
+  <h6><strong>universo dos jovens. As aulas são dinâmicas e totalmente em inglês.</strong></h6>
+  <br>
+  <p>Ao final do curso, os alunos estão com um nível de comunicação que</p>
+  <p>os deixa confortáveis para realizar viagens ao exterior, ter contato com</p>
+  <p>jovens de outros países e explorar recursos da internet.</p>
+</div>
+
+<br>
+
+<%# Imagem Juniors %>
+<div class="imagem-container">
+  <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705934356/Site%20brasas.com/40_fpdfny.png" alt="Imagem-Juniros">
+</div>
+
+<%# Imagem Exam Preparation %>
+<div class="imagem-exam">
+  <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705934419/Site%20brasas.com/41_u24sfk.jpg" alt="Imagem-Exam">
+</div>
+
+<div class="contato-container" id="contato-container">
+  <%# <div class="quero-saber"> %>
+    <h2 class="quero-saber">Quero saber mais</h2>
+  <%# </div> %>
+  <div class="row whats mt-auto">
+    <div class="col-lg-12 col-xl-8 atendente1">
+      <div class="bg-mais">
+        <center>
+          <h1 class="teste3">Solicite um contato</h1>
+        </center>
+        <h2 class="teste2">Deixe os seus dados abaixo e entraremos em contato para mais informações.</h2>
+        <%= simple_form_for :student, url: contato_path, data: { turbo: false } do |f| %>
+          <div class="col">
+            <div class="form-group">
+              <%= f.input :nomecontato, label: 'NOME', placeholder:'Insira seu nome', id:'name', required: true %>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <%= f.input :emailcontato, label: 'E-MAIL', placeholder:'Insira seu e-mail', id:'student_email', required: true %>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <%= f.input :telefonecontato, label: 'TELEFONE', placeholder:'(ddd)xxxxx-xxxx', id:'student_telefone', required: true %>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <%= f.input :acordo, as: :boolean, boolean_style: :inline, label: "Eu concordo em receber comunicações e ofertas personalizadas de acordo com meus interesses." %>
+            </div>
+          </div>
+
+          <div class="avancar">
+            <%= f.button :submit, "Solicitar contato", class: "btn btn-primary", id: "cadastronivel7" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  <div class="container-abc">
+    <%# <div class="falar"> %>
+      <div class="col-lg-12 col-xl-8  container-falar">
+        <div whatsapp-textos>
+          <%= image_tag "zap.png", id: 'whatsapp-logo' %>
+          <h3 class="texto-whatsapp-1"><strong>Falar com um atendente</strong></h3>
+          <h6 class="texto-whatsapp-2"> Clique aqui pra falar com um atendente via WhatsApp agora mesmo. </h6>
+        </div>
+        <br>
+        <div encontre-total>
+          <i class="fa-solid fa-location-dot"></i>
+          <h3 class="texto-encontre-1"><strong>Encontre uma unidade</strong></h3> <br>
+          <h6 class="texto-encontre-2"> Encontre a unidade mais próxima e informe-se sobre disponibilidade de turmas. </h6>
+        </div>
+
+        <div class="botao-encontre">
+          <%= simple_form_for :student, url: contato_path, data: { turbo: false } do |f| %>
+            <%= f.button :submit, "Encontre sua unidade", class: "btn btn-primary", id: "botao-unidade" %>
+          <% end %>
+        </div>
+
+        <div class="container-teste">
+          <h4><strong>Para começar, descubra seu nível em nosso teste de nivelamento.</strong></h4>
+          <p>O nosso teste de nivelamento te ajuda a descobrir em que módulo você deve ingressar. Acesse o link abaixo e comece o seu teste agora mesmo!</p>
+            <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" class="btn btn-primary" id="botao-teste">Acessar o teste</a>
+        </div>
+        <%# <center><%= link_to "Encontrar unidade", locations_path, id:'cadastronivel7' %></center>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<%# <div class="proximos">
+  <h2>Próximos passos</h2>
+  <h3>Após sua passagem pelo Pre-k, a criança ingressa no curso Kids.</h3>
+</div> %>
+
+<%# Cards Cursos %>
+<div class="containercursos">
+  <center><h2 class="conheca mt-5"><strong>Conheça nossos cursos</strong></h2></center>
+
+  <div class="col-12 tipodecursos">
+    <div class="cards1">
+      <div class="card-category1" color="white">
+        <center>
+          Pre-k <br>
+          <h6 class="mod mt-3">A partir do Pré-2</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516500/Site%20brasas.com/1_wkozwz-removebg-preview_edqwan.png" alt="Descrição da imagem" class="imagem-card">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          Kids <br>
+          <h6 class="mod mt-3">3º ano do Ensino Fundamental</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516715/Site%20brasas.com/2_kw3u8k-removebg-preview_gf0sze.png" alt="Descrição da imagem" class="imagem-card1">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          Juniors & Teens <br>
+          <h6 class="mod mt-3">6º ano do Ensino Fundamental</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516823/Site%20brasas.com/3_gwu1gm-removebg-preview_a1g4y8.png" alt="Descrição da imagem" class="imagem-card2">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          Adults <br>
+          <h6 class="mod mt-3">A partir de 14 anos</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516897/Site%20brasas.com/4_rsdkid-removebg-preview_inylag.png" alt="Descrição da imagem" class="imagem-card">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          BRASAS Online <br>
+          <h6 class="mod mt-3">Aprenda com aulas online e ao vivo</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705516987/Site%20brasas.com/5_qd6zbf-removebg-preview_bl5s9t.png" alt="Descrição da imagem" class="imagem-card3">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          Certificação Internacional <br>
+          <h6 class="mod mt-3">Cursos preparatórios e prova</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705517093/Site%20brasas.com/6_n3h31m-removebg-preview_wd8t9m.png" alt="Descrição da imagem" class="imagem-card">
+        </center>
+      </div>
+
+      <div class="card-category1" color="white">
+        <center>
+          Parcerias <br>
+          <h6 class="mod mt-3">Escolas, Universidades e Empresas</h6>
+          <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705517187/Site%20brasas.com/7_blgxte-removebg-preview_cbgbsj.png" alt="Descrição da imagem" class="imagem-card">
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%# CSS %>
+<style>
+.container-abc {
+  margin-top: 90px;
+  margin-left: 200px;
+}
+
+.container-teste {
+  background-color: white;
+  /* position: fixed; */
+  width: 458px;
+  height: 296px;
+  margin-top: 50px;
+  margin-left: -196px;
+  padding: 32px;
+  border-radius: 24px;
+  border: 1px #BCBEC0; /* Adicione a cor desejada para a borda */
+  box-sizing: border-box; /* Garante que a borda e o preenchimento não afetem as dimensões totais */
+  gap: 32px;
+  background-color: #fff; /* Adicione a cor de fundo desejada */
+}
+
+.container-teste h1 {
+  width: 394px;
+  height: 64px;
+  font-family: 'Museo Sans', sans-serif;
+  color: #2C2C2C;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.container-teste p {
+  width: 394px;
+  height: 72px;
+  font-family: 'Museo Sans', sans-serif;
+  color: #2C2C2C;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 20px;
+}
+
+#botao-teste {
+  border-color: #1E22BE;
+  background-color: white;
+  text-decoration: none;
+  color: #1E22BE;
+  border-radius: 8px;
+  font-size: 15px !important;
+  /* font-weight: bolder !important; */
+  margin-top: 15px;
+  /* margin-left: -130px; */
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 12px;
+  padding-bottom: 15px;
+  width: 394px;
+  height: 48px;
+  text-align: center;
+}
+
+#botao-teste:hover {
+  color:white;
+  background-color: #1E22BE;
+}
+
+.text-container {
+  width: 100%;
+  max-width: 800px;
+  height: 184px;
+  margin: 30px 550px 0 550px; /* Margem superior e inferior de 30px e laterais automáticas */
+  /* padding: 30px; */
+  text-align: center; /* Centraliza o texto dentro da div */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+}
+
+.text-container h6 {
+  font-family: 'Museo Sans', sans-serif;
+  color: #2C2C2C;
+  width: 799.81px;
+  height: 208px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: -10px; /* Espaçamento entre os parágrafos dentro da div */
+}
+
+.text-container p {
+  font-family: 'Museo Sans', sans-serif;
+  color: #2C2C2C;
+  width: 799.81px;
+  height: 208px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: -10px; /* Espaçamento entre os parágrafos dentro da div */
+}
+
+.bg-mais {
+  font-family: 'Museo Sans', sans-serif;
+  background-color: white;
+  border-radius: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 25px;
+  padding-bottom: 1px;
+  margin-bottom: 57px;
+  margin-right: -100px;
+  margin-left: 101px;
+}
+
+.bg-mais h1 {
+  font-family: 'Museo Sans', sans-serif;
+  color: #2C2C2C;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.bg-mais h2 {
+  font-family: 'Museo Sans', sans-serif;
+  color: #2C2C2C;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+width: 330px;
+}
+
+.form-label {
+  font-family: 'Museo Sans', sans-serif;
+  color: #2C2C2C;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  text-align: left;
+}
+
+.form-check {
+  font-family: 'Museo Sans', sans-serif;
+  color: #2C2C2C;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  text-align: left;
+}
+
+.falar {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.container-falar {
+  width: 164px;
+  margin-right: auto !important;
+  margin-left: 90px !important;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.quero-saber {
+  color: #FFFFFF;
+  width: 339px;
+  height: 48px;
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 60px;
+  margin-left: 800px;
+  padding-top: 70px;
+}
+
+.contato-container {
+  background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705411901/Site%20brasas.com/32_ekwrtw.png');
+  width: auto;
+  height: auto; /* Ajusta a altura automaticamente para o tamanho da imagem */
+  background-size: 100% 100%; /* Estica a imagem para preencher completamente a div */
+  background-position: center;
+  top: -1px;
+}
+
+.atendente1 {
+  width: Fixed (541px);
+  height: Hug (632px);
+  margin-top: 100px;
+  margin-left: 187px;
+  /* padding: 32px; */
+  border-radius: 16px;
+  border: 1px;
+  gap: 32px;
+}
+
+#whatsapp-logo {
+  width: 52px;
+  height: 52px;
+  margin-top: -140px;
+  margin-left: -202px;
+}
+
+.whatsapp-textos {
+  width: 164px;
+  height: 79px;
+}
+
+.texto-whatsapp-1 {
+  color: white;
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: -111px;
+  margin-left: -130px;
+}
+
+.texto-whatsapp-2 {
+  color: white;
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: -130px;
+}
+
+
+.fa-location-dot {
+  color: rgb(255, 255, 255);
+  font-size: 50px !important;
+  margin-top: 20px;
+  margin-left: -195px;
+  display: flex;
+}
+
+.encontre-total {
+  width: 164px;
+  height: 79px;
+}
+
+.texto-encontre-1 {
+  color: white;
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: -50px;
+  margin-left: -130px;
+}
+
+.texto-encontre-2 {
+  width: 350px;
+  color: white;
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: -25px;
+  margin-left: -130px;
+}
+
+#botao-unidade {
+  border-color: #1E22BE;
+  background-color: #1E22BE;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px !important;
+  font-weight: bolder !important;
+  margin-top: 20px;
+  margin-left: -130px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 208px;
+  text-align: center;
+}
+
+#botao-unidade:hover {
+  color:#1E22BE;
+  background-color: white;
+}
+
+
+/* Imagem Pre-K */
+.imagem-container {
+  width: 100%; /* Defina a largura da div conforme necessário */
+  text-align: center; /* Centraliza a imagem horizontalmente na div */
+  background-color: #FFFFFF;
+  margin-top: 100px;
+}
+
+.imagem-container img {
+  width: 100%; /* Ajusta a largura da imagem para ocupar 100% da largura da div */
+  height: auto; /* A altura da imagem será ajustada de acordo com a largura definida */
+  display: block; /* Ajusta o espaçamento inferior */
+  margin: 0 auto; /* Garante que a imagem seja centralizada horizontalmente */
+  padding: 10px 10px 30px 10px;
+}
+
+.imagem-exam {
+  width: 540px; /* Defina a largura da div conforme necessário */
+  height: 137px; /* Defina a altura da div conforme necessário */
+  text-align: center; /* Centraliza a imagem horizontalmente na div */
+  background-color: #FFFFFF;
+  margin-top: 100px;
+}
+
+.imagem-exam img {
+  width: 100%; /* Ajusta a largura da imagem para ocupar 100% da largura da div */
+  height: auto; /* A altura da imagem será ajustada de acordo com a largura definida */
+  display: flex; /* Ajusta o espaçamento inferior */
+  margin: -80px 50px 10px 680px; /* Garante que a imagem seja centralizada horizontalmente */
+  /* padding: 10px 10px 30px 10px; */
+}
+
+/* Proximos Passos */
+.proximos {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+  gap: 0; /* Espaçamento entre colunas e linhas */
+}
+.proximos h2 {
+  grid-column: 1; /* H1 na primeira coluna (esquerda) */
+  margin-left: 600px;
+  width: 141px;
+  height: 80px;
+  color: #2C2C2C;
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+
+.proximos h3 {
+  grid-column: 2; /* H3 na segunda coluna (direita) */
+  margin-top: 10px;
+  margin-right: 600px;
+  width: 427px;
+  height: 64px;
+  color: #2C2C2C;
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+
+/* Cards Cursos */
+.containercursos {
+  background-color: #EBFAFF;
+  padding: 40px 0 144px 0;
+  max-width: 100%;
+  height: 100%;
+}
+
+.conheca {
+  color: #2C2C2C;
+  font-family: 'Museo Sans', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.tipodecursos {
+  display: flex;
+  justify-content: center;
+}
+
+.cards1 {
+  display: flex;
+  justify-content: center;
+  max-width: 1400px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.card-category1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #001E60;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 32px;
+  width: 324px;
+  height: 264px;
+  background: #FFFFFF;
+  border: 1px solid #B3B3B3;
+  padding: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.imagem-card {
+  width: 324px;
+  height: auto;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.imagem-card1 {
+  width: 324px;
+  height: auto;
+  position: relative;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  margin-top: -40px;
+}
+
+.imagem-card2 {
+  width: 324px;
+  height: auto;
+  position: relative;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  margin-top: -10px;
+}
+
+.imagem-card3 {
+  width: 324px;
+  height: auto;
+  position: relative;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  margin-top: -32px;
+}
+
+/* Banner */
+.banner-juniors {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  padding: 250px 0;
+}
+
+.banner-text {
+    width: Fixed (885px);
+    height: Hug (128px);
+    gap: 32px;
+    margin-top: -70px;
+  }
+
+.banner-text h1{
+  color: #2C2C2C;
+  font-family: 'Museo Sans', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 72px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+
+.banner-text p{
+  color: #2C2C2C;
+  font-family: 'Museo Sans', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+</style>
+
+<%= render "shared/footer" %>
+<%= render "shared/flashes" %>
+
+<script>
+setTimeout(function() {
+var flashes = document.querySelectorAll('.alert');
+flashes.forEach(function(flash) {
+flash.style.display = 'none';
+});
+}, 3000);
+</script>
