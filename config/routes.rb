@@ -38,7 +38,7 @@ Rails.application.routes.draw do
   get 'contato', to: 'mains#contato', as: 'contato'
   post 'contato', to: 'mains#contato', as: 'contato_post'
 
-  get '/franqueado', to: 'mains#franqueado', as: 'franqueado'
+  get '/seja_franqueado', to: 'mains#seja_franqueado', as: 'seja_franqueado'
 
   get '/concluido', to: 'mains#concluido', as: 'concluido'
   get '/cursos', to: 'mains#cursos', as: 'cursos'
