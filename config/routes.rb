@@ -32,8 +32,8 @@ Rails.application.routes.draw do
   get '/fale_conosco', to: 'mains#fale_conosco', as: 'fale_conosco'
   post '/fale_conosco', to: 'mains#fale_conosco_post', as: 'fale_conosco_post'
 
-  get '/trabalhe', to: 'mains#trabalhe', as: 'trabalhe'
-  post '/trabalhe', to: 'mains#trabalhe', as: 'trabalhe_post'
+  get '/trabalhe_conosco', to: 'mains#trabalhe_conosco', as: 'trabalhe_conosco'
+  post '/trabalhe_conosco', to: 'mains#trabalhe_conosco', as: 'trabalhe_conosco_post'
 
   get 'contato', to: 'mains#contato', as: 'contato'
   post 'contato', to: 'mains#contato', as: 'contato_post'

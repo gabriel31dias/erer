@@ -1,63 +1,79 @@
 <%= render "shared/navbar" %>
 
-<div class="banner" style="background-image: url(https://res.cloudinary.com/dgrsenrsa/image/upload/v1705685751/Site%20brasas.com/35_aoksho.png);" id="bg-image1">
+<div class="banner" style="background-image: url(https://res.cloudinary.com/dgrsenrsa/image/upload/v1706017575/Site%20brasas.com/45_pm3yi2.png);" id="bg-image1">
   <div class="container">
-    <center>
       <div class="metodo">
-        Fale conosco <br>
+        Trabalhe conosco <br>
       </div>
-      <br>
-      <div class="metodos">
-        A gente adoraria ouvir o que você tem a dizer. <br>
-        Mande uma mensagem abaixo.
-      </div>
-    </center>
   </div>
 </div>
 
-<div class="container bg-quero" id="bg-quero">
-  <div class="row whats">
+<div class="container" id="bg-quero">
+  <div class="row">
     <div class="col-lg-12 col-xl-8 atendente1">
       <div class="bg-mais">
-        <h1 class="teste1">Contato</h1>
-        <h1 class="teste2">Para enviar uma mensagem, é necessário preencher os campos.</h1>
-        <%= simple_form_for :student, url: fale_conosco_post_path, data: { turbo: false } do |f| %>
+        <h1 class="teste1">Faça parte do time BRASAS</h1>
+        <h1 class="teste2">Preencha o formulário com as suas informações e entraremos em contato.</h1>
+        <%= simple_form_for :student, url: trabalhe_conosco_post_path, data: { turbo: false } do |f| %>
           <div class="form-group">
-            <%= f.input :nomefale, label: 'NOME', placeholder:'Insira seu nome', id:'name', required: true %>
+            <div class="form-group-item">
+              <%= f.input :nomefale, label: 'NOME', placeholder: 'Insira seu nome', id: 'name', required: true %>
+            </div>
+            <div class="form-group-item">
+              <%= f.input :emailfale, label: 'E-MAIL', placeholder: 'Insira seu e-mail', id: 'student_email', required: true %>
+            </div>
           </div>
 
           <div class="form-group">
-            <%= f.input :emailfale, label: 'E-MAIL', placeholder:'Insira seu e-mail', id:'student_email', required: true %>
+            <div class="form-group-item">
+              <%= f.input :telefonefale, label: 'TELEFONE', placeholder:'(ddd) xxxxx-xxxx', id:'student_telefone', required: true %>
+            </div>
+            <div class="form-group-item">
+              <%= f.input :telefonefale, label: 'CIDADE', placeholder:'Insira sua cidade', id:'student_telefone', required: true %>
+            </div>
           </div>
 
           <div class="form-group">
-            <%= f.input :telefonefale, label: 'TELEFONE', placeholder:'(ddd)xxxxx-xxxx', id:'student_telefone', required: true %>
+            <div class="form-group-item">
+              <%= f.input :telefonefale, label: 'ÁREA DESEJADA', placeholder:'Selecione a área desejada', id:'student_telefone', required: true %>
+            </div>
+            <div class="form-group-item">
+              <%= f.input :telefonefale, label: 'CURRÍCULO', placeholder:'Selecione seu arquivo', id:'student_telefone', required: true %>
+            </div>
           </div>
 
-           <div class="form-group">
-              <%= f.input :mensagemfale, as: :text, label: 'MENSAGEM', placeholder: 'Insira sua mensagem', id: 'student_mensagem', required: true, input_html: { class: 'custom-textarea' } %>
+          <style>
+            .form-group {
+              display: flex;
+              width: 647px;
+            }
+
+            .form-group-item {
+              margin-right: 30px;
+              width: 100%;
+            }
+
+            .form-group-item1 {
+              /* margin-right: 40px; */
+              width: 100%;
+            }
+
+          </style>
+
+           <div class="form-group-item1">
+              <%= f.input :mensagemfale, as: :text, label: 'COMENTÁRIOS ADICIONAIS', placeholder: 'Insira seu comentário', id: 'student_mensagem', required: true, input_html: { class: 'custom-textarea' } %>
             </div>
 
           <div class="form-group">
-            <%= f.input :acordo, as: :boolean, boolean_style: :inline, label: "Eu concordo em receber comunicações e ofertas personalizadas de acordo com meus interesses." %>
+            <%= f.input :acordo, as: :boolean, boolean_style: :inline, label: "Eu concordo em enviar meus dados pessoais para análise em um possível processo seletivo para vaga." %>
+          </div>
+
+          <div class="form-group">
+            <%= f.input :acordo, as: :boolean, boolean_style: :inline, label: "Eu concordo em receber comunicações e ofertas personalizadas de acordo com meus interesses" %>
           </div>
 
           <div class="form-group text-center">
             <%= f.button :submit, "Enviar", class: "btn btn-primary", id: "cadastronivel1" %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="col-lg-12 col-xl-8 atendente1">
-      <div class="bg-mais1">
-        <h1 class="teste3">Quer falar com uma<br>Unidade específica?</h1>
-        <h1 class="teste4">Para informações sobre valor da mensalidade,<br>horários e promoções, entre em contato direto com<br>a unidade desejada.</h1>
-        <%= simple_form_for :student, url: contato_path, data: { turbo: false } do |f| %>
-          <div class="form-group text-center">
-            <%= link_to "Ver unidades", class: "btn btn-primary", id: "cadastronivel2" do %>
-              Ver unidades&nbsp;&nbsp;<i class="fa-sharp fa-solid fa-arrow-right"></i>
-            <% end %>
           </div>
         <% end %>
       </div>
@@ -71,24 +87,12 @@
     background-color: white;
   }
 
-  .atendente1 {
-    margin-right: auto !important;
-    margin-left: auto !important;
-  }
-
-  .whats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 24px;
-    margin-top: 60px;
-    max-width: 100%;
-  }
-
   .metodo {
     font-weight: 700;
     font-size: 72px;
     line-height: 72px;
     color: white;
+    margin-left: 280px;
   }
 
   .metodos {
@@ -99,7 +103,7 @@
   }
 
   .custom-textarea {
-    height: 120px; /* Ajuste a altura conforme necessário */
+    height: 120px;
     resize: vertical;
     margin-top: -81px;
   }
@@ -138,6 +142,19 @@
     padding-left: 20px;
   }
 
+  .atendente1 {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  /* .whats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    margin-top: 60px;
+    max-width: 100%;
+  } */
+
   .teste3 {
     color: black;
     font-size: 35px;
@@ -158,6 +175,7 @@
     margin-bottom: 57px;
     margin-top: -100px;
     border: 1px solid #BCBEC0;
+    width: 720px;
   }
 
   .bg-mais1 {
