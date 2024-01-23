@@ -1,0 +1,186 @@
+<%= render "shared/navbar" %>
+
+<div class="banner" style="background-image: url(https://res.cloudinary.com/dgrsenrsa/image/upload/v1705324013/Site%20brasas.com/27_vi76op.png);" id="bg-image1">
+  <div class="container">
+    <center>
+      <div class="metodo">
+        O BRASAS <br>
+      </div>
+      <br>
+      <div class="metodos">
+        Um método exclusivo e mais de meio século de tradição e <br>
+        experiência no ensino da língua inglesa. Conheça mais sobre a <br>
+        nossa história e venha para o BRASAS!
+      </div>
+    </center>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content-with-image">
+    <div class="metodo-text">
+      <div class="metodo1">
+        Como tudo começou <br>
+      </div>
+      <br>
+      <div class="metodo2">
+        E para começar a falar do BRASAS, precisamos falar da história de George <br>
+        Zinovetz, fundador do curso e criador do método BRASAS. <br> <p></p>
+        Nascido em uma família russa e criado em Xangai, George frequentou <br>
+        escolas inglesas e francesas onde formou seu círculo de amigos de diversas <br>
+        nacionalidades. Desde cedo, ele percebeu que crescer em meio a diversidade <br>
+        é fundamental para a nossa formação.
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1706040481/Site%20brasas.com/1_zqf9wi.png" id="img" alt="Description of the image">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content-with-image">
+    <div class="metodo-text">
+      <div class="metodo1">
+      </div>
+      <br>
+      <div class="metodo3">
+        Na década de 50, precisou fugir da ditadura na China e buscar refúgio em <br>
+        outro país - foi assim que chegou ao Brasil e rapidamente aprendeu um <br>
+        quinto idioma, o português. Aqui, tornou-se professor e aprendeu que a <br>
+        comunicação e educação seriam as grandes ferramentas que transformariam <br>
+        a sua vida e a de milhares de pessoas. Assim, nascia o BRASAS.
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1706040481/Site%20brasas.com/1_zqf9wi.png" id="img" alt="Description of the image">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content-with-image">
+    <div class="metodo-text">
+      <div class="metodo1">
+      </div>
+      <br>
+      <div class="metodo4">
+        Falar outra língua vai muito além de viagens, currículo e emprego. Se você <br>
+        compreende outra pessoa em mais de uma língua você está naturalmente <br>
+        criando uma oportunidade de conhecer uma nova cultura, uma nova forma <br>
+        de se expressar e de criar conexões. E era isso que George queria quando <br>
+        criou o BRASAS - ampliar a capacidade de comunicação e gerar mais <br>
+        oportunidades na vida das pessoas através da educação.
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1706040481/Site%20brasas.com/1_zqf9wi.png" id="img" alt="Description of the image">
+    </div>
+  </div>
+</div>
+
+<div class="verde">
+  <center>
+    <div class="texto"> <br>
+      O BRASAS está presente em diversas cidades do Brasil, entre <br>
+      elas Rio de Janeiro, Belo Horizonte e Brasília.
+    </div>
+  </center>
+</div>
+
+<div class="video">
+  <video width="100%" height="auto" controls>
+    <source src="https://res.cloudinary.com/dgrsenrsa/video/upload/v1706042260/Site%20brasas.com/BRASAS___Content_Guide_vmeogs.mp4" type="video/mp4">
+  </video>
+</div>
+
+<%= render "shared/footer" %>
+
+<style>
+  .container {
+    max-width: 1000px; /* Adjust as needed */
+    margin: 0 auto;
+  }
+
+  .content-with-image {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+
+  }
+
+  .metodo-text {
+    flex: 1; /* Take remaining width */
+  }
+
+  .image-container {
+    flex-shrink: 0; /* Do not shrink the image */
+    margin-left: 20px; /* Adjust as needed for spacing */
+  }
+
+  #img {
+    width: 259px;
+    position: absolute;
+    left: 247px;
+    z-index: 0;
+    top: 629px
+  }
+
+  .metodo {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 72px;
+    color: white;
+  }
+
+  .metodos {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: white;
+  }
+
+  .metodo1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #2C2C2C;
+    margin-top: 100px;
+  }
+
+  .metodo3 {
+    position: absolute;
+    left: 600px;
+  }
+
+  .metodo4 {
+    position: absolute;
+    left: 800px;
+    top: 1270px;
+  }
+
+  .verde {
+    background-color: #C5E86C;
+    height: 300px;
+    width: 100%;
+    margin-top: 376px;
+  }
+
+  .texto {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+/* Optional: Add responsive styles */
+@media (max-width: 768px) {
+  .content-with-image {
+    flex-direction: column; /* Stack elements vertically on small screens */
+  }
+
+  .image-container {
+    margin-left: 0; /* Remove margin on small screens */
+    margin-top: 10px; /* Add some top margin for spacing */
+  }
+}
+
+</style>
