@@ -75,3 +75,7 @@ group :test do
 end
 
 gem "cloudinary"
+
+gem 'activeadmin'
+gem 'byebug'
+gem 'image_processing', '~> 1.2'

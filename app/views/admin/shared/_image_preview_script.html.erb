@@ -1,0 +1,46 @@
+<script type="text/javascript">
+  function previewImage(input) {
+    // Seleciona a div com a classe current-image
+    var currentImageDiv = document.querySelector('.current-image');
+   
+    // Remove a imagem existente, se houver
+    var imagemExistente = document.getElementById('img');
+    if (imagemExistente) {
+      currentImageDiv.removeChild(imagemExistente);
+    }
+
+    // Cria uma nova tag img
+    var novaImagem = document.createElement('img');
+    novaImagem.id = 'img';
+    novaImagem.width = 300;
+    novaImagem.height = 200;
+
+    // Adiciona a nova tag img à div current-image
+    currentImageDiv.appendChild(novaImagem);
+
+    // Obtém o arquivo selecionado
+    var file = input.files[0];
+    var reader = new FileReader();
+
+    // Define o evento onloadend para carregar a imagem
+    reader.onloadend = function () {
+      novaImagem.src = reader.result;
+    };
+
+    // Verifica se há um arquivo e lê como URL de dados
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      novaImagem.src = '';
+    }
+  }
+
+  // Executa a configuração inicial para imagens existentes
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('form#edit_banner input[type="file"]').forEach(function (input) {
+      input.onchange = function () {
+        previewImage(input);
+      };
+    });
+  });
+</script>
