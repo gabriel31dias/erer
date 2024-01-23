@@ -2,8 +2,12 @@
   <%= render "shared/navbar" %>
 </div>
 
+
+  <div id="bannerImages" data-images="<%= raw @banners_base64 %>"></div>
+
+
 <%# BANNER %>
-  <div class="banner" style="background-image: url(https://res.cloudinary.com/dgrsenrsa/image/upload/v1705518494/Site%20brasas.com/34_p9tksb.png);" id="bg-image1">
+  <div id="banner" class="banner" style="background-image: url(https://res.cloudinary.com/dgrsenrsa/image/upload/v1705518494/Site%20brasas.com/34_p9tksb.png);" id="bg-image1">
     <div class="container-banner">
       <h3 class="nivel">
         Descubra o nível <br>
@@ -779,3 +783,7 @@
       }
     }
 </style>
+
+<script>
+ 
+</script>

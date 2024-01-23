@@ -72,7 +72,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_22_215619) do
     t.string "name"
     t.string "description"
     t.boolean "active"
-    t.string "image"
+    t.binary "image"
   end
 
   create_table "users", force: :cascade do |t|

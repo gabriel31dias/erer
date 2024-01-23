@@ -4,7 +4,7 @@ class CreateBanners < ActiveRecord::Migration[7.1]
       t.string :name
       t.string :description
       t.boolean :active
-      t.string :image
+      t.blob :image
 
     end
   end
