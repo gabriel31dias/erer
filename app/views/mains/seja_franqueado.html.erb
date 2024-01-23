@@ -4,12 +4,13 @@
   <div class="container">
     <center>
       <div class="metodo">
-        Fale conosco <br>
+        Seja um franqueado <br>
       </div>
       <br>
       <div class="metodos">
-        A gente adoraria ouvir o que você tem a dizer. <br>
-        Mande uma mensagem abaixo.
+        O BRASAS está sempre em expansão, e você também pode fazer parte dessa  <br>
+        história de sucesso. Torne-se um franqueado e nos ajude na nossa missão de <br>
+        expandir horizontes com o domínio do inglês.
       </div>
     </center>
   </div>
@@ -18,8 +19,29 @@
 <div class="container bg-quero" id="bg-quero">
   <div class="row whats">
     <div class="col-lg-12 col-xl-8 atendente1">
+      <div class="bg-mais1">
+        <div class="teste3">Qualidade acima de tudo</div>
+        <div class="teste4">
+          O BRASAS preza muito pela qualidade de seu ensino, oferecendo o que <br>
+          há de melhor no mercado para os seus alunos através do seu método de <br>
+          aprendizagem, professores eficientes e material qualificado. São anos <br>
+          obtendo resultados positivos seguindo essa filosofia didática. Leia mais <br>
+          sobre o nosso método. <br> <p></p>
+          É de extrema importância que o dono de uma franquia BRASAS esteja <br>
+          afinado com nossa filosofia e compromisso com a qualidade. Este <br>
+          cuidado na escolha de parceiros pode determinar uma demora no <br>
+          processo de expansão das unidades. Mas por outro lado, todas as <br>
+          escolas abertas são um sucesso, adquirindo o mais alto conceito <br>
+          prestígio nas suas cidades. <br> <p></p>
+          Seja um franqueado BRASAS.
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-lg-12 col-xl-8 atendente1">
       <div class="bg-mais">
-        <h1 class="teste1">Contato</h1>
+        <h1 class="teste1">Entre em contato!</h1>
         <h1 class="teste2">Para enviar uma mensagem, é necessário preencher os campos.</h1>
         <%= simple_form_for :student, url: fale_conosco_post_path, data: { turbo: false } do |f| %>
           <div class="form-group">
@@ -44,20 +66,6 @@
 
           <div class="form-group text-center">
             <%= f.button :submit, "Enviar", class: "btn btn-primary", id: "cadastronivel1" %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="col-lg-12 col-xl-8 atendente1">
-      <div class="bg-mais1">
-        <h1 class="teste3">Quer falar com uma<br>Unidade específica?</h1>
-        <h1 class="teste4">Para informações sobre valor da mensalidade,<br>horários e promoções, entre em contato direto com<br>a unidade desejada.</h1>
-        <%= simple_form_for :student, url: contato_path, data: { turbo: false } do |f| %>
-          <div class="form-group text-center">
-            <%= link_to "Ver unidades", class: "btn btn-primary", id: "cadastronivel2" do %>
-              Ver unidades&nbsp;&nbsp;<i class="fa-sharp fa-solid fa-arrow-right"></i>
-            <% end %>
           </div>
         <% end %>
       </div>
@@ -131,11 +139,12 @@
 
   .teste4 {
     color: black;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 40px;
     text-align: initial;
-    line-height: 22px;
+    line-height: 24px;
     padding-left: 20px;
+    font-weight: 400;
   }
 
   .teste3 {
@@ -162,14 +171,12 @@
 
   .bg-mais1 {
     background-color: white;
-    border-radius: 10px;
     padding: 10px;
     margin-bottom: 57px;
-    width: 100%;
+    width: 590px;
     text-align: center;
     padding-bottom: 30px;
-    margin-top: -100px;
-    border: 1px solid #BCBEC0;
+    margin-top: -50px;
   }
 
   #cadastronivel1 {

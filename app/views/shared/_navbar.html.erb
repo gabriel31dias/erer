@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav align-items-center me-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">BRASAS</a>
+            <%= link_to "BRASAS", o_brasas_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "MÉTODO", metodo_path, class: "nav-link" %>
@@ -60,7 +60,7 @@
             <%# <%= link_to "TESTE SEU INGLÊS", nivel1_path, id:'ingles' %>
           </li>
           <li class="nav-item">
-            <%= link_to 'http://my.brasas.com', class:'btn btn-primary', target:"_blank", id:'mybrasas' do %>
+            <%= link_to 'http://my.brasas.com', class:'btn btn-primary', id:'mybrasas' do %>
               <i class="fa-solid fa-user"></i>&nbsp;&nbsp;MY BRASAS
             <% end %>
           </li>
