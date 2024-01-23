@@ -1,29 +1,36 @@
 <%= render "shared/navbar" %>
 
-<div class="banner-prek" style="background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322113/Site%20brasas.com/19_r6qkzd.png');">
+<div class="banner-juniors" style="background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705934368/Site%20brasas.com/39_crxgph.png');">
  <div class="banner-text">
-   <h1>Pre-K</h1>
-   <p>Crianças aprendem se divertindo!</p>
+   <h1>Juniors & Teens</h1>
+   <p>BRASAS, o inglês que te conecta com o mundo.</p>
  </div>
 </div>
 
 <div class="container mt-3">
-  <h6 class="claf"><u>Cursos</u> / <strong>Pré-K</strong></h6> <br>
+  <h6 class="claf"><u>Cursos</u> / <strong>Juniors & Teens</strong></h6> <br>
 </div>
 
 <div class="text-container">
-  <h6><strong>São aulas divertidas em que as crianças participam de brincadeiras dinâmicas, todas em inglês.</strong></h6>
-  <h5>Assim, começam a se familiarizar com a musicalidade da língua.</h5>
-  <p>Não trabalhamos com palavras escritas para não interferir no processo de alfabetização da língua portuguesa.</p>
+  <h6><strong>Ensinamos estruturas gramaticais e vocabulário apropriado ao </strong></h6>
+  <h6><strong>universo dos jovens. As aulas são dinâmicas e totalmente em inglês.</strong></h6>
+  <br>
+  <p>Ao final do curso, os alunos estão com um nível de comunicação que</p>
+  <p>os deixa confortáveis para realizar viagens ao exterior, ter contato com</p>
+  <p>jovens de outros países e explorar recursos da internet.</p>
 </div>
 
 <br>
 
-<%# Imagem Pre-K %>
+<%# Imagem Juniors %>
 <div class="imagem-container">
-  <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322111/Site%20brasas.com/12_xg3exa.png" alt="Descrição da imagem">
+  <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705934356/Site%20brasas.com/40_fpdfny.png" alt="Imagem-Juniros">
 </div>
 
+<%# Imagem Exam Preparation %>
+<div class="imagem-exam">
+  <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705934419/Site%20brasas.com/41_u24sfk.jpg" alt="Imagem-Exam">
+</div>
 
 <div class="contato-container" id="contato-container">
   <%# <div class="quero-saber"> %>
@@ -94,17 +101,13 @@
           <p>O nosso teste de nivelamento te ajuda a descobrir em que módulo você deve ingressar. Acesse o link abaixo e comece o seu teste agora mesmo!</p>
             <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" class="btn btn-primary" id="botao-teste">Acessar o teste</a>
         </div>
-        <%# <center><%= link_to "Encontrar unidade", locations_path, id:'cadastronivel7'</center> %>
+        <%# <center><%= link_to "Encontrar unidade", locations_path, id:'cadastronivel7' %></center>
       </div>
     </div>
   </div>
 </div>
 </div>
 
-<div class="proximos">
-  <h2>Próximos passos</h2>
-  <h3>Após sua passagem pelo Pre-k, a criança ingressa no curso Kids.</h3>
-</div>
 
 <%# Cards Cursos %>
 <div class="containercursos">
@@ -196,7 +199,7 @@
   }
 
   /* Banner */
-  .banner-prek {
+  .banner-juniors {
     width: 100%;
     height: 400px;
     background-size: cover;
@@ -212,7 +215,7 @@
     }
 
   .banner-text h1{
-    color: #2C2C2C;
+    color: #FFFFFF;
     font-family: 'Museo Sans', sans-serif;
     font-weight: 700;
     font-size: 72px;
@@ -223,13 +226,15 @@
 
 
   .banner-text p{
-    color: #2C2C2C;
+    color: #FFFFFF;
     font-family: 'Museo Sans', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
     letter-spacing: 0em;
     text-align: center;
+    width: 350px;
+    margin-left: 770px;
   }
 
   .container-abc {
@@ -304,8 +309,8 @@
 
 .text-container {
   width: 100%;
-  max-width: 1440px;
-  height: 268px;
+  max-width: 800px;
+  height: 184px;
   margin: 30px 550px 0 550px; /* Margem superior e inferior de 30px e laterais automáticas */
   /* padding: 30px; */
   text-align: center; /* Centraliza o texto dentro da div */
@@ -317,40 +322,27 @@
 .text-container h6 {
   font-family: 'Museo Sans', sans-serif;
   color: #2C2C2C;
-  width: 800px;
-  height: 216px;
+  width: 799.81px;
+  height: 208px;
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
   letter-spacing: 0em;
   text-align: left;
-  margin-bottom: 10px; /* Espaçamento entre os parágrafos dentro da div */
-}
-
-.text-container h5 {
-  font-family: 'Museo Sans', sans-serif;
-  color: #2C2C2C;
-  width: 800px;
-  height: 216px;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: 0em;
-  text-align: left;
-  /* margin-bottom: 10px; Espaçamento entre os parágrafos dentro da div */
+  margin-bottom: -10px; /* Espaçamento entre os parágrafos dentro da div */
 }
 
 .text-container p {
   font-family: 'Museo Sans', sans-serif;
   color: #2C2C2C;
-  width: 816px;
-  height: 216px;
+  width: 799.81px;
+  height: 208px;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
   letter-spacing: 0em;
   text-align: left;
-  margin-top: -35px; Espaçamento entre os parágrafos dentro da div
+  margin-bottom: -10px; /* Espaçamento entre os parágrafos dentro da div */
 }
 
 .bg-mais {
@@ -559,6 +551,7 @@ width: 330px;
   width: 100%; /* Defina a largura da div conforme necessário */
   text-align: center; /* Centraliza a imagem horizontalmente na div */
   background-color: #FFFFFF;
+  margin-top: 100px;
 }
 
 .imagem-container img {
@@ -567,6 +560,22 @@ width: 330px;
   display: block; /* Ajusta o espaçamento inferior */
   margin: 0 auto; /* Garante que a imagem seja centralizada horizontalmente */
   padding: 10px 10px 30px 10px;
+}
+
+.imagem-exam {
+  width: 540px; /* Defina a largura da div conforme necessário */
+  height: 137px; /* Defina a altura da div conforme necessário */
+  text-align: center; /* Centraliza a imagem horizontalmente na div */
+  background-color: #FFFFFF;
+  margin-top: 100px;
+}
+
+.imagem-exam img {
+  width: 100%; /* Ajusta a largura da imagem para ocupar 100% da largura da div */
+  height: auto; /* A altura da imagem será ajustada de acordo com a largura definida */
+  display: flex; /* Ajusta o espaçamento inferior */
+  margin: -80px 50px 10px 680px; /* Garante que a imagem seja centralizada horizontalmente */
+  /* padding: 10px 10px 30px 10px; */
 }
 
 /* Proximos Passos */

@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get '/o_brasas', to: 'mains#o_brasas', as: 'o_brasas'
   get '/metodo', to: 'mains#metodo', as: 'metodo'
   get '/unidades', to: 'mains#unidades', as: 'unidades'
+  get '/unidades_lista', to: 'mains#unidades_lista', as: 'unidades_lista'
   get '/indique_e_ganhe', to: 'mains#indique_e_ganhe', as: 'indique_e_ganhe'
   get '/feed', to: 'mains#feed', as: 'feed'
 

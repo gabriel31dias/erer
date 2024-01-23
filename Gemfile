@@ -79,3 +79,5 @@ gem "cloudinary"
 gem 'activeadmin'
 gem 'byebug'
 gem 'image_processing', '~> 1.2'
+gem 'open_street_map'
+gem 'leaflet-rails'

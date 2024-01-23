@@ -1,27 +1,26 @@
 <%= render "shared/navbar" %>
 
-<div class="banner-prek" style="background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322113/Site%20brasas.com/19_r6qkzd.png');">
+<div class="banner-bol" style="background-image: url('https://res.cloudinary.com/dgrsenrsa/image/upload/v1705948556/Site%20brasas.com/44_zotqsh.png');">
  <div class="banner-text">
-   <h1>Pre-K</h1>
-   <p>Crianças aprendem se divertindo!</p>
+   <h1>BRASAS Online</h1>
+   <p>Viva a experiência de aprender inglês em tempo real.</p>
  </div>
 </div>
 
 <div class="container mt-3">
-  <h6 class="claf"><u>Cursos</u> / <strong>Pré-K</strong></h6> <br>
+  <h6 class="claf"><u>Cursos</u> / <strong>BOL</strong></h6> <br>
 </div>
 
-<div class="text-container">
-  <h6><strong>São aulas divertidas em que as crianças participam de brincadeiras dinâmicas, todas em inglês.</strong></h6>
-  <h5>Assim, começam a se familiarizar com a musicalidade da língua.</h5>
-  <p>Não trabalhamos com palavras escritas para não interferir no processo de alfabetização da língua portuguesa.</p>
+<%# <div class="text-container">
+  <h6><strong>Foco na comunicação oral com gramática estruturada.</strong></h6>
+  <p>Você aprende a pensar em inglês, sem recorrer a traduções, e a usar corretamente o vocabulário e estrutura do idioma.</p>
 </div>
 
-<br>
+<br> %>
 
-<%# Imagem Pre-K %>
+<%# Imagem BOL %>
 <div class="imagem-container">
-  <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705322111/Site%20brasas.com/12_xg3exa.png" alt="Descrição da imagem">
+  <img src="https://res.cloudinary.com/dgrsenrsa/image/upload/v1705948060/Site%20brasas.com/43_eqjler.png" alt="Imagem Adults">
 </div>
 
 
@@ -94,7 +93,7 @@
           <p>O nosso teste de nivelamento te ajuda a descobrir em que módulo você deve ingressar. Acesse o link abaixo e comece o seu teste agora mesmo!</p>
             <a href="https://brasasonline.typeform.com/teste-de-ingles?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&typeform-source=brasasonline.com.br" target="_blank" class="btn btn-primary" id="botao-teste">Acessar o teste</a>
         </div>
-        <%# <center><%= link_to "Encontrar unidade", locations_path, id:'cadastronivel7'</center> %>
+        <%# <center><%= link_to "Encontrar unidade", locations_path, id:'cadastronivel7' %></center>
       </div>
     </div>
   </div>
@@ -196,44 +195,46 @@
   }
 
   /* Banner */
-  .banner-prek {
-    width: 100%;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    padding: 250px 0;
+.banner-bol {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  padding: 250px 0;
+}
+
+.banner-text {
+    width: Fixed (885px);
+    height: Hug (128px);
+    gap: 32px;
+    margin-top: -70px;
   }
 
-  .banner-text {
-      width: Fixed (885px);
-      height: Hug (128px);
-      gap: 32px;
-      margin-top: -70px;
-    }
-
-  .banner-text h1{
-    color: #2C2C2C;
-    font-family: 'Museo Sans', sans-serif;
-    font-weight: 700;
-    font-size: 72px;
-    line-height: 72px;
-    letter-spacing: 0em;
-    text-align: center;
-  }
+.banner-text h1{
+  color: #FFFFFF;
+  font-family: 'Museo Sans', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 72px;
+  letter-spacing: 0em;
+  text-align: center;
+}
 
 
-  .banner-text p{
-    color: #2C2C2C;
-    font-family: 'Museo Sans', sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: 0em;
-    text-align: center;
-  }
+.banner-text p{
+  width: 450px;
+  color: #FFFFFF;
+  font-family: 'Museo Sans', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-left: 730px;
+}
 
-  .container-abc {
-    margin-top: 90px;
+.container-abc {
+  margin-top: 90px;
   margin-left: 200px;
 }
 
@@ -302,16 +303,18 @@
   background-color: #1E22BE;
 }
 
+/* Texto abaixo do Banner */
 .text-container {
   width: 100%;
-  max-width: 1440px;
-  height: 268px;
-  margin: 30px 550px 0 550px; /* Margem superior e inferior de 30px e laterais automáticas */
-  /* padding: 30px; */
+  max-width: 800px;
+  height: 112px;
+  margin: 50px 550px 50px 550px; /* Margem superior e inferior de 30px e laterais automáticas */
+  padding: 30px;
   text-align: center; /* Centraliza o texto dentro da div */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centraliza verticalmente */
+  gap: 30px;
 }
 
 .text-container h6 {
@@ -324,10 +327,10 @@
   line-height: 32px;
   letter-spacing: 0em;
   text-align: left;
-  margin-bottom: 10px; /* Espaçamento entre os parágrafos dentro da div */
+  /* margin-bottom: 10px; Espaçamento entre os parágrafos dentro da div */
 }
 
-.text-container h5 {
+.text-container p {
   font-family: 'Museo Sans', sans-serif;
   color: #2C2C2C;
   width: 800px;
@@ -337,20 +340,6 @@
   line-height: 32px;
   letter-spacing: 0em;
   text-align: left;
-  /* margin-bottom: 10px; Espaçamento entre os parágrafos dentro da div */
-}
-
-.text-container p {
-  font-family: 'Museo Sans', sans-serif;
-  color: #2C2C2C;
-  width: 816px;
-  height: 216px;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: 0em;
-  text-align: left;
-  margin-top: -35px; Espaçamento entre os parágrafos dentro da div
 }
 
 .bg-mais {
@@ -556,9 +545,13 @@ width: 330px;
 
 /* Imagem Pre-K */
 .imagem-container {
+  width: 1440px;
   width: 100%; /* Defina a largura da div conforme necessário */
+  height: 1868.33px;
+  padding: 0px 48px 60px 48px;
   text-align: center; /* Centraliza a imagem horizontalmente na div */
   background-color: #FFFFFF;
+  gap: 60px;
 }
 
 .imagem-container img {
@@ -687,7 +680,6 @@ width: 330px;
   border-bottom-right-radius: 16px;
   margin-top: -32px;
 }
-
 </style>
 
 <%= render "shared/footer" %>
