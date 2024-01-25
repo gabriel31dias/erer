@@ -1,14 +1,15 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
+  <div class="z-3 container-fluid menu-opened">
     <a class="navbar-brand" href="<%= root_path %>">
       <%= image_tag "BRASAS.png" %>
-</a>
+    </a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav align-items-center me-auto">
+    <div class="mt-4 mb-4 mt-lg-0 mb-lg-0 collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mt-4 mb-4 mt-lg-0 mb-lg-0 align-items-center me-auto">
           <li class="nav-item active">
             <%= link_to "BRASAS", o_brasas_path, class: "nav-link" %>
           </li>
@@ -110,7 +111,7 @@
     border: 1px solid rgb(255, 255, 255);
   }
 
-  .container-fluid {
+  .menu-opened {
     background-color: #001E60;
   }
 
@@ -269,4 +270,34 @@
     color: var(--bs-nav-pills-link-active-color);
     background-color: #1E22BE;
   }
+
+  /* Estilos padrão que se aplicarão a todos os dispositivos */
+    
+  /* Estilos específicos para dispositivos com largura de tela até 576 pixels */
+  @media (max-width: 576px) {
+    /* Adicione seus estilos específicos aqui */
+    #ingles {
+    margin-right: 0 !important;
+    }
+
+    #mybrasas {
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Estilos específicos para dispositivos com largura de tela entre 577 e 768 pixels */
+  @media (min-width: 577px) and (max-width: 768px) {
+    /* Adicione seus estilos específicos aqui */
+  }
+
+  /* Estilos específicos para dispositivos com largura de tela entre 769 e 992 pixels */
+  @media (min-width: 769px) and (max-width: 992px) {
+    /* Adicione seus estilos específicos aqui */
+  }
+
+  /* Estilos específicos para dispositivos com largura de tela maior que 992 pixels */
+  @media (min-width: 993px) {
+    /* Adicione seus estilos específicos aqui */
+  }
+  </style>
 </style>
