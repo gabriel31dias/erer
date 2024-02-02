@@ -195,18 +195,6 @@
 
   // tipo.html.erb
 
-  @media (min-width: 576px) {
-    .rounded-nav {
-      border-radius: 50rem !important;
-    }
-  }
-
-  @media (min-width: 576px) {
-    .rounded-nav .nav-link {
-      border-radius: 50rem !important;
-    }
-  }
-
   .nav-link.active,
   .nav-link:focus {
     color: #c5e86c !important;
@@ -294,12 +282,19 @@
 
     #mybrasas {
       margin-bottom: 20px;
-    }
+    }  
   }
 
   /* Estilos específicos para dispositivos com largura de tela entre 769 e 992 pixels */
   @media (min-width: 769px) and (max-width: 992px) {
     /* Adicione seus estilos específicos aqui */
+    .rounded-nav {
+      border-radius: 50rem !important;
+    }
+    
+    .rounded-nav .nav-link {
+      border-radius: 50rem !important;
+    }
   }
 
   /* Estilos específicos para dispositivos com largura de tela maior que 992 pixels */
